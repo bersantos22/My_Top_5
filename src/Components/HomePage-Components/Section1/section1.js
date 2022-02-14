@@ -17,7 +17,7 @@ export function Section1(){
                 </div>
                 <br></br>
                 <div className="textBotton">
-                     <p>You can create your top 5: Bands, Series, Movies, Foods, Drinks and more! Click in button bellow and start your <i>MyTop 5</i>!</p>
+                     <p>You can create your top 5: Bands, Series, Movies, Foods, Drinks and more! Click in button bellow and start your <i>MyTop 5</i> !</p>
                 </div>
 
                 <div className="divButton">
