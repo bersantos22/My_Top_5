@@ -14,7 +14,9 @@ export function Section2(){
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={musicImg} alt='CircleImgIcon' />
                 </div>
+                <p>Musics</p>
                 <div className='textImg'>
+                    
                     <p>What are your top 5 bands?</p>
                 </div>
             </div>
@@ -22,6 +24,7 @@ export function Section2(){
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={seriesImg} alt='CircleImgIcon' />
                 </div>
+                <p>Series</p>
                 <div className='textImg'>
                     <p>Friends or H.I.M.Y.M?</p>
                 </div>
@@ -30,6 +33,7 @@ export function Section2(){
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={foodImg} alt='CircleImgIcon' />
                 </div>
+                <p>Foods</p>
                 <div className='textImg'>
                     <p>1.Pizza 2.Barbecue</p>
                 </div>
@@ -38,6 +42,7 @@ export function Section2(){
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={drinkImg} alt='CircleImgIcon' />
                 </div>
+                <p>Drinks</p>
                 <div className='textImg'>
                     <p>TEQUILA !? BEER !?</p>
                 </div>
@@ -46,6 +51,7 @@ export function Section2(){
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={movieImg} alt='CircleImgIcon' />
                 </div>
+                <p>Movies</p>
                 <div className='textImg'>
                     <p>Lotr &gt; Star Wars &gt; HP ??</p>
                 </div>
