@@ -3,16 +3,20 @@
 
 .section1{
     display: flex;
-    padding: 20px;
+    padding: 25px;
+    padding-top: 40px;
+    padding-bottom: 80px;
     font-family: 'Oswald', sans-serif;
-    background-color: #262b2b;
+    background-color: #172020;
     justify-content: space-around;
     align-items: center;
+    width: auto;
+    height: auto;
 }
 .divTextHero{
     
     width: 500px;
-    height: 400px;
+    height: 500px;
     padding: 15px;
 }
 .bigText{
@@ -35,7 +39,8 @@
 .smallTextBot{
     display: flex;
     font-family: Oswald;
-    color:#df6322;
+    color:
+    #fb3742;
     font-size: 40px;
     font-display: swap;
 }
@@ -67,7 +72,9 @@
 }
 
 button{
-    background-color: #df6322;
+    background-color: 
+    
+#df6322;
     color:#ffffde;
     font-weight: bold;
     font-size: 30px;

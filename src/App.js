@@ -1,14 +1,12 @@
 import './App.css';
 import { NavBar } from './Components/NavBar/NavBar';
-import 'bulma/css/bulma.css';
-import {Section1} from './Components/Section1/section1'
-
+import 'bulma/css/bulma.css'; 
+import { HomePage } from './Pages/HomePage/HomePage';
 function App() {
   return (
     <div className="App">
      <NavBar />
-     <Section1 />
-   
+      <HomePage />
     </div>
   );
 }

@@ -8,10 +8,11 @@
 } */
 
 nav{
+    
     font-family: 'Yellowtail';
     font-size:40px;
     color:#ffffdd ;
-    background-color: #262b2b;
+    background-color: #172020;
     display: flex;
     font-weight: bold;
     flex-wrap: nowrap;
