@@ -12,13 +12,13 @@ export function Card(props){
             <p className="card-text">{`Bebida: ${props.bebida}`}</p>
             <p className="card-text"> {`Filme: ${props.filme}`}</p>
             <p className="card-text">{`Serie: ${props.serie}`}</p>
-            <Link to={`/editar-pet/${props.id}`}>
+            {/* <Link to={`/editar-pet/${props.id}`}>
               <button type="button">Editar My Top 5</button>
             </Link>
     
             <button type="button" onClick={handleDelete}>
               Remover Pet
-            </button>
+            </button> */}
           </div>
         </div>
       );

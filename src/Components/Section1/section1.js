@@ -1,0 +1,37 @@
+import react from "react";
+import './style.css'
+import img from '../images/polaroid Big Img.png'
+
+export function Section1(){
+    return(
+        <section className="section1">
+            <div className="divTextHero">
+                <div className="smallTextTop">
+                    <p>CHOOSE THE BEST!</p>
+                </div>
+                <div className='bigText'>
+                    <p>CREATE YOUR TOP 5 LIST</p>
+                </div>
+                <div className="smallTextBot">
+                    <p>Share with your friends</p>
+                </div>
+                <br></br>
+                <div className="textBotton">
+                     <p>You can create your top 5: Bands, Series, Movies, Foods, Drinks and more! Clinck in button bellow and start your <i>MyTop 5</i>!</p>
+                </div>
+
+                <div className="divButton">
+                    <button>
+                        <i>MyTop 5</i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div className="BigCard">
+                <img className='polaroid' src={img} alt='BigPolaroid'/>
+            </div>
+           
+        </section>
+    )
+}
