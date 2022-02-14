@@ -1,9 +1,13 @@
 import './App.css';
+import { NavBar } from './Components/NavBar/NavBar';
+import 'bulma/css/bulma.css';
+import {Section1} from './Components/Section1/section1'
 
 function App() {
   return (
     <div className="App">
-     <h1>MY TOP 5 !</h1>
+     <NavBar />
+     <Section1 />
    
     </div>
   );
