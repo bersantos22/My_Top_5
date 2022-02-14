@@ -1,0 +1,46 @@
+ @import url('https://fonts.googleapis.com/css2?family=Mukta&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Oswald:wght@700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Open+Sans&family=Oswald:wght@700&family=Yellowtail&display=swap');
+
+
+/* .section1{
+    font-family: 'Oswald', sans-serif;
+} */
+
+nav{
+    font-family: 'Yellowtail';
+    font-size:40px;
+    color:#ffffdd ;
+    background-color: #262b2b;
+    display: flex;
+    font-weight: bold;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+.linksPage{ 
+    
+}
+
+.listUl{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-right: 50px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav a{
+    text-decoration: none;
+    color:#ffffdd;
+}
+
+.listLi{
+    padding: 20px;
+}
