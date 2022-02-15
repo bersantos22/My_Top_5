@@ -3,20 +3,29 @@ import './App.css';
 import { ErrorPage } from "./Pages/ErrorPage/ErrorPage";
 import { NavBar } from './Components/NavBar/NavBar';
 import 'bulma/css/bulma.css';
-/* import { HomePage } from "./Pages/HomePage/HomePage"; */
+import {Section1} from './Components/Section1/section1'
+import { PostMyTop } from "./Pages/PostTop5";
 
 function App() {
   return (
-    <div className="App">
-
+    
+     
      <BrowserRouter>
+     
      <NavBar />
-     <Routes>
-       <Route path="*" element={<ErrorPage/>}/>
+     <Section1 />
+      <Routes>
+     
+     
+       <Route path="/not-found" element={<ErrorPage/>}/>
+       <Route path="/post-top-5" element={<PostMyTop/>}/>
      </Routes>
      </BrowserRouter>
+     
+     
+     
    
-    </div>
+    
   );
 }
 

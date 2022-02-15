@@ -1,4 +1,6 @@
+import Astronaut from "../../Components/images/erro404.jpg";
+
 export function ErrorPage(){
     //adicionar imagem 
-    return <h1>Página não encontrada</h1>
+    return <img src={Astronaut} alt="Not Found" />
 }

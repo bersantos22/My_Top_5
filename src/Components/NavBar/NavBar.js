@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import { Link } from "react-router-dom";
 
 export function NavBar(){
     return (
@@ -13,8 +14,10 @@ export function NavBar(){
                                 {/* LINK AQUI */}
                             </li>
                             <li className='listLi'>
-                            <a>Create Top 5</a>
-                                {/* LINK AQUI */}
+                            
+                                <Link className="nav-link text-light" to="/post-top-5">
+                                Create Top 5
+                                </Link>
                             </li>
                             <li className='listLi'>
                             <a>About Us</a>
