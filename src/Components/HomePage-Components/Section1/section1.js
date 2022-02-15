@@ -25,7 +25,7 @@ export function Section1(){
                 <div className="divButton">
                    
                 <Link className="nav-link text-light" to="/post-top-5">
-                <button>
+                <button className="btnSection1">
                         <i>MyTop 5</i>
                     </button>
                 </Link>

@@ -4,58 +4,127 @@ import './style.css'
 export function Card(props){
     return(
         <>
-            <div className='card-container'>
-                <div className='card-base card-one'>
-                    <div className='imgCards'>
-                        <div className='btn-base btn-one'>
-                            <p> #1 NOME{props.name}</p>
-                        </div>
-                        <div className='textCards'>
-                            <p> TEXTO {props.text}</p>
-                        </div>
-                    </div>
+    <div className='card-container'>
+
+        <div className='card-base card-one'>
+                <div className='imgCards'>
+                    <img src={props.img} alt='ImgCard' />
                 </div>
-                <div className='card-base card-two'>
-                    <div className='imgCards'>
-                    <div className='btn-base btn-two'>
-                            <p> #2 {props.name}</p>
-                        </div>
-                        <div className='textCards'>
-                            <p>TEXTO {props.text}</p>
-                        </div>    
-                    </div>
+
+                <div className='btn-base btn-one'>
+                    <p> #1 GOLD</p>
                 </div>
-                <div className='card-base card-three'>
-                    <div className='imgCards'>
-                    <div className='btn-base btn-three'>
-                            <p>#3 NOME {props.name}</p>
-                        </div>
-                        <div className='textCards'>
-                            <p>TEXTO {props.text}</p>
-                        </div>   
-                    </div>
+
+                <div className='textCards'>
+                    <p>{props.type}</p>
+                    <p><b>{props.name}</b></p>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.. </p>
                 </div>
-                <div className='card-base card-four'>
-                    <div className='imgCards'>
-                    <div className='btn-base btn-four'>
-                            <p>#4 {props.name}</p>
-                        </div>
-                        <div className='textCards'>
-                            <p> TEXTO {props.text}</p>
-                        </div>       
-                    </div>
+
+                <div className='btn-div'>
+
+                    <button className='btn-Card'>Edit</button>
+                    <button className='btn-Card'>Delete</button>
+
                 </div>
-                <div className='card-base card-five'>
-                    <div className='imgCards'>
-                    <div className='btn-base btn-five'>
-                            <p>#5 {props.name}</p>
-                        </div>
-                        <div className='textCards'>
-                            <p>TEXTO {props.text} </p>
-                        </div>       
-                    </div>
+        </div>
+
+        <div className='card-base card-two'>
+
+                <div className='imgCards'>
+                    <img src={props.img} alt='ImgCard' />
                 </div>
-            </div>
+
+                <div className='btn-base btn-two'>
+                    <p> #2 SILVER </p>
+                </div>
+
+                <div className='textCards'>
+                    <p>{props.type}</p>
+                    <p><b>{props.name}</b></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo..</p>
+                </div>
+
+                <div className='btn-div'>
+
+                    <button className='btn-Card'>Edit</button>
+                    <button className='btn-Card'>Delete</button>
+
+                </div>    
+        </div>
+        <div className='card-base card-three'>
+
+                <div className='imgCards'>
+                    <img src={props.img} alt='ImgCard' />
+                </div>
+
+                <div className='btn-base btn-three'>
+                        <p>#3 BRONZE </p>
+                </div>
+
+                <div className='textCards'>
+                        <p>{props.type}</p>
+                        <p><b>{props.name}</b></p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.</p>
+                </div>
+
+                <div className='btn-div'>
+
+                    <button className='btn-Card'>Edit</button>
+                    <button className='btn-Card'>Delete</button>
+
+                </div>   
+        </div>
+
+        <div className='card-base card-four'>
+                <div className='imgCards'>
+                    <img src={props.img} alt='ImgCard' />
+                </div>
+
+                <div className='btn-base btn-four'>
+                        <p>#4 FOURTH </p>
+                </div>
+
+                <div className='textCards'>
+                        <p>{props.type}</p>
+                        <p><b>{props.name}</b></p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.</p>
+                </div>    
+
+                <div className='btn-div'>
+
+                    <button className='btn-Card'>Edit</button>
+                    <button className='btn-Card'>Delete</button>
+
+                </div>   
+        </div>
+
+        <div className='card-base card-five'>
+
+                <div className='imgCards'>
+                    <img src={props.img} alt='ImgCard' />
+                </div>
+
+                <div className='btn-base btn-five'>
+                        <p>#5 FIFTH </p>
+                </div>
+
+                <div className='textCards'>
+                        <p>{props.type}</p>
+                        <p><b>{props.name}</b></p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.. </p>
+                </div>
+
+                <div className='btn-div'>
+
+                    <button className='btn-Card'>Edit</button>
+                    <button className='btn-Card'>Delete</button>
+
+                </div>         
+        </div>
+
+    </div>
+
         </>
     )
 }

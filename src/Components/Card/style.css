@@ -1,76 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/* CARD BODY  */
 .card-container{
-display:flex;
-justify-content: center;
-}
-
-.card-base{
-    width:350px;
-    height: 500px;
-    margin: 50px;
-    border-radius: 40px;
-    box-shadow: 2px 2px 22px rgba(0,0,0,0.2);
-}
-.imgCards{
-    width:350px;
-    height: 350px;
-    border-radius: 40px;
-    background-size: 140%;
-    background-size: 0%;
-
-}
-
-.btn-base{
-    display: flex;
+    font-family:"Source Sans Pro";
+    display:flex;
     justify-content: center;
-    align-items: center;
-    width: 260px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: white;
-    margin-top: -25px;
-    margin: 0 auto;
-    font-size: 30px;
-}
+    flex-direction: row;
+    }
+     
+    .card-base{
+        width:280px;
+        height: 530px;
+        margin: 25px;
+        border-radius: 40px;
+        box-shadow: 2px 2px 22px rgba(0,0,0,0.2);
+    }
+    .card-base:hover{
+        box-shadow: 2px 12px 32px rgba(0,0,0,0.5);
+        margin-top: 20px;
+        cursor:pointer;
+    }
 
-.btn-one{
-    background-color:#FF8A8A ;
-}
-.btn-two{
-   
-}
-.btn-three{
-
-}
-.btn-four{
-
-}
-.btn-five{
-
-}
-
-.textCards{
-    padding:5px 35px;
-    font-size:18px;
-
-}
-
-.card-one{
-    background-color: #FFE697;
-}
-
-.card-two{
-    background-color: #E4E4E4;
-}
-
-.card-three{
-    background-color: rgb(205, 127, 50);
+/* IMG CARD */
+    .imgCards{
+        height: 250px;
+        border-radius: 40px;
+        background-size: 100%; 
     
-}
+    }
+    
+    .btn-base{
+        display: flex;
+        width: 180px;
+        height: 40px;
+        border-radius: 50px;
+        margin: 0 auto;
+        margin-top: -25px;
+        font-size: 30px;
+        color:white;
+        justify-content: center;
+        align-items: center;
+    }
+    /* BRN CENTER */
+    .btn-one{
+        background-color:#ebba5f ;
+    }
+    .btn-two{
+       background-color: #BFBBBB;
+    }
+    .btn-three{
+        background-color:rgb(231, 126, 65) ;
+    }
+    .btn-four{
+       background-color:#31a2fa;
+    }
+    .btn-five{
+        background-color:#66d675;
+    }
+    
+    /* TEXT AREA CARD */
+    .textCards{
+       
+        width: 250px;
+        height: 180px;
+        padding-left: 20px;
+        padding-right: 5px;
+        font-size:18px;
+        padding-bottom: 10px;
+    
+    }
+    
+    /* CARDS BACKGROUNDS  */
+    .card-one{
+        background-color: #FFE697;
+    }
+    
+    .card-two{
+        background-color: #E4E4E4;
+    }
+    
+    .card-three{
+        background-color: rgb(238, 161, 83);
+        
+    }
+    
+    .card-four{
+        background-color: #B7E0FF;
+    }
+    
+    .card-five{
+        background-color: #74e7b7;
+    }
+    
+/*  CSS BUTTON CARDS  */
+    .btn-Card{
+        color:#262b2b;
+        font-weight: bold;
+        font-size: 20px;
+        font-family:"Source Sans Pro";
+        width: 75px;
+        height: 32px;
+        box-sizing: border-box;
+        border-color: #262b2b;
+        border-radius: 5px;
+        box-shadow: 2px 12px 32px rgba(0,0,0,0.2);
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .btn-Card:hover{
+        box-shadow: 2px 12px 32px rgba(0,0,0,0.7);
+        cursor:pointer;
+    }
 
-.card-four{
-    background-color: #B7E0FF;
-}
-
-.card-five{
-    background-color: #B7E0FF;
-}
+    .btn-div{
+        padding-left: 60px;
+    }

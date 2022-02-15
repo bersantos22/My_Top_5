@@ -71,15 +71,23 @@
    padding: 25px; 
 }
 
-button{
-    background-color: 
-    
-#df6322;
+.btnSection1{
+    background-color:#df6322;
     color:#ffffde;
     font-weight: bold;
     font-size: 30px;
     font-family:"Source Sans Pro";
-    width: 130px;
+    width: 140px;
     height: 45px;
-    border: none;
+    box-sizing: border-box;
+    border-color: #262b2b;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(32, 30, 30, 0.14);
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.btnSection1:hover{
+    box-shadow: 2px 12px 32px rgba(0,0,0,0.6);
+    cursor:pointer;
 }
