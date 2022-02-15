@@ -1,7 +1,22 @@
 import React from 'react';
 import './style.css'
+import axios from 'axios';
 
 export function Card(props){
+
+    async function handleDelete() {
+        try {
+          await axios.delete(
+            `https://ironrest.herokuapp.com/mytop5/${props.id}`
+          );
+          props.setRerender(true);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+
+
     return(
         <>
     <div className='card-container'>
@@ -117,8 +132,8 @@ export function Card(props){
 
                 <div className='btn-div'>
 
-                    <button className='btn-Card'>Edit</button>
-                    <button className='btn-Card'>Delete</button>
+                    <button type="button" className='btn-Card'>Edit</button>
+                    <button type="button" className='btn-Card' onClick={handleDelete}>Delete</button>
 
                 </div>         
         </div>
