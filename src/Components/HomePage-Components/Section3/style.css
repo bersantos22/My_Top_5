@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.section3{
+ background-color:#ecebeb;
+ padding-bottom:30px;
+}
+.twoCards-div{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+
+}
+.text-Top{
+    font-size: 35px;
+    color: #ea6722;
+    line-height: 28px;
+    text-align: center;
+    font-family:'Source Sans Pro';
+    font-weight:bold;
+    font-style:normal;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.TextDev{
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 20px;
+    color:#63665a;
+}
+.TextDev a{
+    font-weight:bold;
+}
+
+.DevCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo{
+    border-radius: 200px;
+    width: 350px;
+    height: 350px;
+}

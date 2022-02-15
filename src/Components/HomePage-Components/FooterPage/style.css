@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Open+Sans&family=Oswald:wght@700&family=Yellowtail&display=swap');
+
+footer{
+    padding: 20px;
+    background-color: #262b2b;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+.TextFooter{
+    color:#ffffdd ;
+    font-family: 'Yellowtail';
+    padding: 10px 0 5px;
+  
+}
+
+.footer-bottom {
+    padding: 20px 0 5px;
+    border-top: 1px solid rgba(237,237,237,0.1);
+}
+
+.footer-copyright p 
+{
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 0;
+}
