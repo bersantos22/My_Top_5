@@ -7,8 +7,8 @@ export function FooterPage(){
             <div className="TextFooter">
                 <h1>MyTop 5</h1>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-copyright">	
+            <div className="footer-bottom">
+                <div className="footer-copyright">	
                  <p>My Top 5 ! @2022 All Rights Reserved </p>
                 </div>	
 			</div>   

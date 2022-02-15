@@ -5,6 +5,7 @@ import { NavBar } from './Components/NavBar/NavBar';
 import 'bulma/css/bulma.css'; 
 import { HomePage } from './Pages/HomePage/HomePage';
 import { PostMyTop } from "./Pages/PostTop5";
+import { AboutUs } from "./Pages/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -14,13 +15,13 @@ function App() {
      
       <NavBar />
 
-      <HomePage />
-
       <Routes>
      
      
        <Route path="/not-found" element={<ErrorPage/>}/>
        <Route path="/post-top-5" element={<PostMyTop/>}/>
+       <Route path="/aboutUs" element={<AboutUs />} />
+       <Route path="/" element={<HomePage />} />
 
      </Routes>
      </BrowserRouter>
