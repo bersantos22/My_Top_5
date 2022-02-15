@@ -10,8 +10,11 @@ export function NavBar(){
                 <div className='linksPage'>
                         <ul className='listUl'>
                             <li className='listLi'>
-                            <a>Home</a>
-                                {/* LINK AQUI */}
+
+                            <Link 
+                            className='Link-Nav'
+                            to='/'
+                            >Home</Link>
                             </li>
                             <li className='listLi'>
                             
@@ -20,8 +23,9 @@ export function NavBar(){
                                 </Link>
                             </li>
                             <li className='listLi'>
-                            <a>About Us</a>
-                                {/* LINK AQUI */}
+
+                            <Link className='Link-Nav' to="/aboutUs">About Us</Link>
+                            
                             </li>
                         </ul>
                 </div>

@@ -22,7 +22,9 @@ nav{
     padding: 10px;
     padding-left: 40px;
 }
-
+.Link-Nav{
+    text-decoration: none;
+}
 .linksPage{ 
     
 }
