@@ -1,6 +1,7 @@
 import react from "react";
 import './style.css'
 import img from '../images/polaroid Big Img.png'
+import {Link} from "react-router-dom"
 
 export function Section1(){
     return(
@@ -21,9 +22,13 @@ export function Section1(){
                 </div>
 
                 <div className="divButton">
-                    <button>
+                   
+                <Link className="nav-link text-light" to="/post-top-5">
+                <button>
                         <i>MyTop 5</i>
                     </button>
+                </Link>
+                    
                 </div>
 
             </div>
