@@ -1,0 +1,30 @@
+.card-container{
+display:flex;
+justify-content: center;
+}
+
+.card-base{
+    width:350px;
+    height: 500px;
+    margin: 50px;
+}
+
+.card-one{
+    background-color: #FFE697;
+}
+
+.card-two{
+    background-color: #E4E4E4;
+}
+
+.card-three{
+    background-color: #B7E0FF;
+}
+
+.card-four{
+
+}
+
+.card-five{
+
+}
