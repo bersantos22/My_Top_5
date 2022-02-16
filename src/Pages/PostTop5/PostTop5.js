@@ -98,6 +98,27 @@ export function PostTop() {
       description: "",
     });
 
+    setMovies({
+        moviesName: "",
+        ranking: 0,
+        image: "",
+        description: "",
+      });
+
+      setSeries({
+        SeriesName: "",
+        ranking: 0,
+        image: "",
+        description: "",
+      });
+
+      setBands({
+        bandsName: "",
+        ranking: 0,
+        image: "",
+        description: "",
+      });
+
     
 
   }
