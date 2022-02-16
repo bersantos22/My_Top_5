@@ -33,7 +33,7 @@ export function Card(props){
                 <div className='textCards'>
                     <p>{props.type}</p>
                     <p><b>{props.name}</b></p>
-                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.. </p>
+                    <p> {props.subtitle} </p>
                 </div>
 
                 <div className='btn-div'>
@@ -57,7 +57,7 @@ export function Card(props){
                 <div className='textCards'>
                     <p>{props.type}</p>
                     <p><b>{props.name}</b></p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo..</p>
+                    <p>{props.subtitle}</p>
                 </div>
 
                 <div className='btn-div'>
@@ -80,7 +80,7 @@ export function Card(props){
                 <div className='textCards'>
                         <p>{props.type}</p>
                         <p><b>{props.name}</b></p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.</p>
+                        <p>{props.subtitle}</p>
                 </div>
 
                 <div className='btn-div'>
@@ -103,7 +103,7 @@ export function Card(props){
                 <div className='textCards'>
                         <p>{props.type}</p>
                         <p><b>{props.name}</b></p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.</p>
+                        <p>{props.subtitle}</p>
                 </div>    
 
                 <div className='btn-div'>
@@ -127,7 +127,7 @@ export function Card(props){
                 <div className='textCards'>
                         <p>{props.type}</p>
                         <p><b>{props.name}</b></p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quibusdam nihil id ratione earum dignissimos dolore, quo.. </p>
+                        <p>{props.subtitle} </p>
                 </div>
 
                 <div className='btn-div'>
