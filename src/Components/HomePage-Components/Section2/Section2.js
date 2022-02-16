@@ -20,24 +20,17 @@ export function Section2(){
                     <p>What are your top 5 bands?</p>
                 </div>
             </div>
+            
             <div className='littleCard'>
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={seriesImg} alt='CircleImgIcon' />
                 </div>
-                <p>Series</p>
+                <p>Tv Series</p>
                 <div className='textImg'>
                     <p>Friends or H.I.M.Y.M?</p>
                 </div>
             </div>
-            <div className='littleCard'>
-                <div className='imgSection2'>
-                <img className='CircleImgIcon' src={foodImg} alt='CircleImgIcon' />
-                </div>
-                <p>Foods</p>
-                <div className='textImg'>
-                    <p>1.Pizza 2.Barbecue</p>
-                </div>
-            </div>
+
             <div className='littleCard'>
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={drinkImg} alt='CircleImgIcon' />
@@ -47,6 +40,17 @@ export function Section2(){
                     <p>TEQUILA !? BEER !?</p>
                 </div>
             </div>
+
+            <div className='littleCard'>
+                <div className='imgSection2'>
+                <img className='CircleImgIcon' src={foodImg} alt='CircleImgIcon' />
+                </div>
+                <p>Foods</p>
+                <div className='textImg'>
+                    <p>1.Pizza 2.Barbecue</p>
+                </div>
+            </div>
+
             <div className='littleCard'>
                 <div className='imgSection2'>
                 <img className='CircleImgIcon' src={movieImg} alt='CircleImgIcon' />
@@ -55,6 +59,7 @@ export function Section2(){
                 <div className='textImg'>
                     <p>Lotr &gt; Star Wars &gt; HP ??</p>
                 </div>
+
             </div>
         
         </section>

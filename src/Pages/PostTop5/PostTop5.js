@@ -8,6 +8,9 @@ export function PostTop() {
   const [infosToSubmit, setInfosToSubmit] = useState({
     foods: [],
     drinks: [],
+    movies:[],
+    series:[],
+    bands:[]
   });
 
   const [listInfo, setListInfo] = useState({
@@ -28,6 +31,24 @@ export function PostTop() {
     image: "",
     description: "",
   });
+  const [series, setSeries] = useState({
+    seriesName: "",
+    ranking: 0,
+    image: "",
+    description: "",
+  });
+  const [movies, setMovies] = useState({
+    moviesName: "",
+    ranking: 0,
+    image: "",
+    description: "",
+  });
+  const [bands, setBands] = useState({
+    bandsName: "",
+    ranking: 0,
+    image: "",
+    description: "",
+  });
 
   function handleChange(event) {
     setListInfo({ ...listInfo, [event.target.name]: event.target.value });
@@ -36,9 +57,18 @@ export function PostTop() {
   function handleFoods(event) {
     setFoods({ ...foods, [event.target.name]: event.target.value });
   }
-
   function handleDrinks(event) {
     setDrinks({ ...drinks, [event.target.name]: event.target.value });
+  }
+
+  function handleSeries(event) {
+    setSeries({ ...series, [event.target.name]: event.target.value });
+  }
+  function handleMovies(event) {
+    setMovies({ ...movies, [event.target.name]: event.target.value });
+  }
+  function handleBands(event) {
+    setBands({ ...bands, [event.target.name]: event.target.value });
   }
 
   function handleAddItem() {
@@ -227,6 +257,149 @@ export function PostTop() {
                 Add drink
                 </button>
 
+              
+                <div className='input-div'>
+
+                    <input
+                    className="input is-info"
+                    placeholder="movies name"
+                    name="moviesName"
+                    value={movies.moviesName}
+                    onChange={handleMovies}
+                    />
+                </div>
+
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="movies ranking"
+                    type="number"
+                    name="ranking"
+                    value={movies.ranking}
+                    onChange={handleMovies}
+                    />
+                </div>
+
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="movies image"
+                    name="image"
+                    value={movies.image}
+                    onChange={handleMovies}
+                    />
+                </div>
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="movies description"
+                    name="description"
+                    value={movies.description}
+                    onChange={handleMovies}
+                    />
+                </div>      
+                <button 
+                className='button is-success' 
+                type="button" 
+                onClick={handleAddItem}>
+                Add Movies
+                </button>
+
+                <div className='input-div'>
+
+                    <input
+                    className="input is-info"
+                    placeholder="Tv series name"
+                    name="seriesName"
+                    value={series.moviesName}
+                    onChange={handleSeries}
+                    />
+                </div>
+
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="Tv series ranking"
+                    type="number"
+                    name="ranking"
+                    value={series.ranking}
+                    onChange={handleSeries}
+                    />
+                </div>
+
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="Link Tv series image"
+                    name="image"
+                    value={series.image}
+                    onChange={handleSeries}
+                    />
+                </div>
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="Tv Series description ou comentary"
+                    name="description"
+                    value={series.description}
+                    onChange={handleSeries}
+                    />
+                </div>      
+                <button 
+                className='button is-success' 
+                type="button" 
+                onClick={handleAddItem}>
+                Add Tv Series
+                </button>
+
+                <div className='input-div'>
+
+                    <input
+                    className="input is-info"
+                    placeholder="bands name"
+                    name="bandsName"
+                    value={bands.foodName}
+                    onChange={handleBands}
+                    />
+                </div>
+
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="bands ranking"
+                    type="number"
+                    name="ranking"
+                    value={bands.ranking}
+                    onChange={handleBands}
+                    />
+                </div>
+
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="bands image"
+                    name="image"
+                    value={bands.image}
+                    onChange={handleBands}
+                    />
+                </div>
+                <div className='input-div'>
+                    <input
+                    className="input is-info"
+                    placeholder="bands description"
+                    name="description"
+                    value={bands.description}
+                    onChange={handleBands}
+                    />
+                </div>      
+                <button 
+                className='button is-success' 
+                type="button" 
+                onClick={handleAddItem}>
+                Add bands
+                </button>
+
+<br></br><br></br>
                 <button className="button is-success" type="submit">Submit </button>
 
             </form>
