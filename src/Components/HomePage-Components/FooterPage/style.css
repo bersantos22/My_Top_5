@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&family=Open+Sans&family=Oswald:wght@700&family=Yellowtail&display=swap');
 
 footer{
-    padding: 20px;
+    padding: 15px;
     background-color: #262b2b;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     display: flex;
     flex-direction:column;
