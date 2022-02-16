@@ -4,7 +4,6 @@ import { ErrorPage } from "./Pages/ErrorPage/ErrorPage";
 import { NavBar } from './Components/NavBar/NavBar';
 import 'bulma/css/bulma.css'; 
 import { HomePage } from './Pages/HomePage/HomePage';
-import { PostMyTop } from "./Pages/PostTop5";
 import { Top5 } from "./Pages/Top5";
 import { AllTop5 } from "./Pages/AllTop5";
 import { AboutUs } from "./Pages/AboutUs/AboutUs";
