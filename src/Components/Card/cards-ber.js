@@ -32,14 +32,14 @@ export function Card(props){
 
                 <div className='textCards'>
                     <p>{props.type}</p>
-                    <p><b>{props.name}</b></p>
+                    <p className='p-name'><b>{props.name}</b></p>
                     <p> {props.subtitle} </p>
                 </div>
 
                 <div className='btn-div'>
 
-                    <button className='btn-Card'>Edit</button>
-                    <button className='btn-Card'>Delete</button>
+                    <button className='btn-Card btn1'><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button className='btn-Card btn1' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>
         </div>
@@ -56,14 +56,14 @@ export function Card(props){
 
                 <div className='textCards'>
                     <p>{props.type}</p>
-                    <p><b>{props.name}</b></p>
+                    <p className='p-name'><b>{props.name}</b></p>
                     <p>{props.subtitle}</p>
                 </div>
 
                 <div className='btn-div'>
 
-                    <button className='btn-Card'>Edit</button>
-                    <button className='btn-Card'>Delete</button>
+                    <button className='btn-Card btn2'><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button className='btn-Card btn2' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>    
         </div>
@@ -79,14 +79,14 @@ export function Card(props){
 
                 <div className='textCards'>
                         <p>{props.type}</p>
-                        <p><b>{props.name}</b></p>
+                        <p className='p-name'><b>{props.name}</b></p>
                         <p>{props.subtitle}</p>
                 </div>
 
                 <div className='btn-div'>
 
-                    <button className='btn-Card'>Edit</button>
-                    <button className='btn-Card'>Delete</button>
+                    <button className='btn-Card btn3'><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button className='btn-Card btn3' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>   
         </div>
@@ -102,14 +102,14 @@ export function Card(props){
 
                 <div className='textCards'>
                         <p>{props.type}</p>
-                        <p><b>{props.name}</b></p>
+                        <p className='p-name'><b>{props.name}</b></p>
                         <p>{props.subtitle}</p>
                 </div>    
 
                 <div className='btn-div'>
 
-                    <button className='btn-Card'>Edit</button>
-                    <button className='btn-Card'>Delete</button>
+                    <button className='btn-Card btn4'><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button className='btn-Card btn4' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>   
         </div>
@@ -126,14 +126,14 @@ export function Card(props){
 
                 <div className='textCards'>
                         <p>{props.type}</p>
-                        <p><b>{props.name}</b></p>
+                        <p className='p-name'><b>{props.name}</b></p>
                         <p>{props.subtitle} </p>
                 </div>
 
                 <div className='btn-div'>
 
-                    <button type="button" className='btn-Card'>Edit</button>
-                    <button type="button" className='btn-Card' onClick={handleDelete}>Delete</button>
+                    <button type="button" className='btn-Card btn5'><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button type="button" className='btn-Card btn5' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>         
         </div>

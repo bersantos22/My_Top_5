@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.container1{
+
+  padding: 40px !important;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  margin-right: 250px;
+  margin-left: 170px;
+  font-family:"Source Sans Pro" !important;
+  font-size: 22px;
+  color:#1a4e4b;
+/*   display: flex !important;
+  justify-content: space-evenly !important; */
+
+
+}
+
+ .is-success {
+
+}
+/*
+.formulario{
+    padding: 30px !important;
+} */
+
+.is-info{
+    padding: 20px !important;
+}
+
+.labelClass{
+    padding: 15px;
+    
+}
+
+.textForms{
+    display: flex;
+    font-family: 'Oswald';
+    color:white;
+    font-size: 40px;
+    font-display: swap;
+    font-weight:bold;
+}

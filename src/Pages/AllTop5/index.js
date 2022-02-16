@@ -1,7 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-
+import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage"
+import './index.css'
 
 export function AllTop5(){
 
@@ -24,16 +25,35 @@ useEffect(()=>{
     return(
     <>
 
-    <h1>Este é o top 5 topzera</h1>
+    <section className='sectionAll'>
+    
+        <div className="textAll">
 
-        <div>
+        <div className="smallTextTop">
+            <p>Hello, everyone !</p>
+        </div>
+
+        <div className='bigText'>
+            <p>THIS IS THE LIST OF ALL TOP 5</p>
+        </div>
+
+        </div>
+
+    </section>
+
+        <div className='topTextALL'>
+            <p>Names:</p>
+        </div>
+
+        <div className='listTop5'>
             {names.map((currenteName)=>{
                 return (
-                    <Link to={`/user-top-5/${currenteName._id}`}><h3>{currenteName.name_owner}</h3></Link>
+                    <Link className='linkALLTop' to={`/user-top-5/${currenteName._id}`}><h3>{currenteName.name_owner}</h3></Link>
                 )
             })}
         </div>
 
+        <FooterPage />
     </>
 
 

@@ -6,11 +6,12 @@
     display:flex;
     justify-content: center;
     flex-direction: row;
+   background-color:#ecebeb;
     }
      
     .card-base{
         width:280px;
-        height: 530px;
+        height: 550px;
         margin: 25px;
         border-radius: 40px;
         box-shadow: 2px 2px 22px rgba(0,0,0,0.2);
@@ -23,9 +24,10 @@
 
 /* IMG CARD */
     .imgCards{
+        width:280px;
         height: 250px;
         border-radius: 40px;
-        background-size: 100%; 
+        background-size: 100%;
     
     }
     
@@ -41,26 +43,32 @@
         justify-content: center;
         align-items: center;
     }
-    /* BRN CENTER */
+    /* BtN CENTER */
+
+    .p-name{
+        font-size: larger;
+    }
     .btn-one{
-        background-color:#ebba5f ;
+        background-color:#dd9b22 ;
+       
     }
     .btn-two{
-       background-color: #BFBBBB;
+       background-color: #7c7a7a;
     }
     .btn-three{
-        background-color:rgb(231, 126, 65) ;
+        background-color:#b97f33 ;
     }
     .btn-four{
-       background-color:#31a2fa;
+       background-color:#257ba3;
     }
     .btn-five{
-        background-color:#66d675;
+        background-color:#bd7b41;
     }
     
     /* TEXT AREA CARD */
     .textCards{
-       
+
+        color:#1f2222;
         width: 250px;
         height: 180px;
         padding-left: 20px;
@@ -70,30 +78,38 @@
     
     }
     
-    /* CARDS BACKGROUNDS  */
+    /* CARDS BACKGROUNDS and BTN Background  */
+    .btn1,
     .card-one{
-        background-color: #FFE697;
+        background-color: #f1c22e;
+        border-color:#f1d67e ;
     }
-    
+    .btn2,
     .card-two{
-        background-color: #E4E4E4;
+        background-color: #a1a2a6;
+        border-color:#aab0c8 ;
     }
     
+    .btn3,
     .card-three{
-        background-color: rgb(238, 161, 83);
+        background-color:#c78f26;
+        border-color:#c89f53 ;
         
     }
-    
+    .btn4,
     .card-four{
-        background-color: #B7E0FF;
+        background-color: #35656ef3;
+        border-color:#549e9e ;
     }
-    
+    .btn5,
     .card-five{
-        background-color: #74e7b7;
+        background-color: #8f633d;
+        border-color:#a3764f ;
     }
     
 /*  CSS BUTTON CARDS  */
     .btn-Card{
+      
         color:#262b2b;
         font-weight: bold;
         font-size: 20px;
@@ -101,17 +117,30 @@
         width: 75px;
         height: 32px;
         box-sizing: border-box;
-        border-color: #262b2b;
-        border-radius: 5px;
+        border-radius: 15px;
         box-shadow: 2px 12px 32px rgba(0,0,0,0.2);
         padding-right: 10px;
         padding-bottom: 10px;
     }
     .btn-Card:hover{
-        box-shadow: 2px 12px 32px rgba(0,0,0,0.7);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
         cursor:pointer;
     }
 
     .btn-div{
-        padding-left: 60px;
+        padding-left: 50px;
+    }
+
+    @media (max-width:1350px) {
+        .card-container{
+            flex-direction: column;
+        }
+        .card-base{
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        nav{
+            flex-direction: column;
+        }
     }
