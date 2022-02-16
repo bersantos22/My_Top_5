@@ -28,12 +28,11 @@ function App() {
         <Route path="/top-5-lists" element={<Top5/>}/>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/not-found" element={<ErrorPage/>}/>
-        <Route path="/post-top-5" element={<PostMyTop/>}/>
+        <Route path="/post-top-5" element={<PostTop />}/>
         <Route path="/alltop5" element={<AllTop5/>}/>
         <Route path="/user-top-5/:id" element={<Top5/>}/>
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/postTop5" element={<PostTop />} />
 
 
      </Routes>
