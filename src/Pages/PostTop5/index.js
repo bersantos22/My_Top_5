@@ -1,311 +1,169 @@
 import { useState } from "react";
 import axios from "axios";
 import "./style.module.css"
+import { eventWrapper } from "@testing-library/user-event/dist/utils";
 
 
-
+//adicionar top 5 do usuário
 export function PostMyTop() {
   
 
-  const [form, setForm] = useState({
-    name_owner:"",
-    name_top:"",
-    comida1: "",
-    comida2: "",
-    comida3: "",
-    comida4: "",
-    comida5: "",
-    bebida1: "",
-    bebida2: "",
-    bebida3: "",
-    bebida4: "",
-    bebida5: "",
-    filme1: "",
-    filme2: "",
-    filme3: "",
-    filme4: "",
-    filme5: "",
-    serie1: "",
-    serie2: "",
-    serie3: "",
-    serie4: "",
-    serie5: "",
-    banda1: "",
-    banda2: "",
-    banda3: "",
-    banda4: "",
-    banda5: "",
-    img_filme: "",
-    img_serie: "",
+  const [infosToSubmit, setInfosToSubmit] = useState({
+    foods: [],
+    drinks: [],
   });
 
-  
+  const [listInfo, setListInfo] = useState({
+    owner: "",
+    listName: "",
+    comments: [],
+  });
+
+  const [foods, setFoods] = useState({
+    foodName: "",
+    ranking: 0,
+    image: "",
+    description: "",
+  });
+  const [drinks, setDrinks] = useState({
+    drinkName: "",
+    ranking: 0,
+    image: "",
+    description: "",
+  });
+  const [movies, setMovies] = useState({
+    movieName:"",
+    ranking:0,
+    image:"",
+    description:"",
+  })
+
   function handleChange(event) {
-    setForm({ ...form, [event.target.name]: event.target.value });
-    console.log(form);
+    setListInfo({ ...listInfo, [event.target.name]: event.target.value });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleFoods(event) {
+    setFoods({ ...foods, [event.target.name]: event.target.value });
+  }
 
-    for (let key in form) {
-      if (!form[key]) {
-        window.alert(`Faltou o campo ${key}.`);
-        return;
-      }
-    }
+  function handleDrinks(event) {
+    setDrinks({ ...drinks, [event.target.name]: event.target.value });
+  }
 
-    console.log("Nao caiu no if");
-    axios.post("https://ironrest.herokuapp.com/mytop5", form);
+  function handleMovies(event){
+    setMovies({...movies, [event.target.name]:eventWrapper.target.value});
+  }
+
+  function handleAddItem() {
+    setInfosToSubmit({
+      ...listInfo,
+      foods: [...infosToSubmit.foods, { ...foods }],
+      drinks: [...infosToSubmit.drinks, { ...drinks }],
+      movies:[...infosToSubmit.movies, {...movies}],
+    });
+
+    console.log(infosToSubmit);
+
+    setFoods({
+      foodName: "",
+      ranking: 0,
+      image: "",
+      description: "",
+    });
+
+    setDrinks({
+      drinkName: "",
+      ranking: 0,
+      image: "",
+      description: "",
+    });
+
+    setMovies({
+      movieName:"",
+      ranking:0,
+      image:"",
+      description:"",
+    })
   }
 
   return (
-   
-    <div className="container">
-   
-    <div className="fomulario">
+    <div className="App">
+      <form>
+        <input
+          placeholder="owner"
+          name="owner"
+          value={listInfo.owner}
+          onChange={handleChange}
+        />
+        <input
+          placeholder="list name"
+          name="listName"
+          value={listInfo.listName}
+          onChange={handleChange}
+        />
 
-    
+        <input
+          placeholder="food name"
+          name="foodName"
+          value={foods.foodName}
+          onChange={handleFoods}
+        />
+        <input
+          placeholder="food ranking"
+          name="ranking"
+          value={foods.ranking}
+          onChange={handleFoods}
+        />
+        <input
+          placeholder="food image"
+          name="image"
+          value={foods.image}
+          onChange={handleFoods}
+        />
+        <input
+          placeholder="food description"
+          name="description"
+          value={foods.description}
+          onChange={handleFoods}
+        />
 
+        <button type="button" onClick={handleAddItem}>
+          Add food
+        </button>
 
-   <form onSubmit={handleSubmit}>
-     
-   <label htmlFor="name_owner">Listo do:</label>
-      <input
-        id="name_owner"
+        <input
+          placeholder="drink name"
+          name="drinkName"
+          value={drinks.drinkName}
+          onChange={handleDrinks}
+        />
+        <input
+          placeholder="drink ranking"
+          type="number"
+          name="ranking"
+          value={drinks.ranking}
+          onChange={handleDrinks}
+        />
+        <input
+          placeholder="drink image"
+          name="image"
+          value={drinks.image}
+          onChange={handleDrinks}
+        />
+        <input
+          placeholder="drink description"
+          name="description"
+          value={drinks.description}
+          onChange={handleDrinks}
+        />
+
+        <button type="button" onClick={handleAddItem}>
+          Add drink
+        </button>
+
         
-        name="name_owner"
-        value={form.name_owner}
-        onChange={handleChange}
-      />
 
-<label htmlFor="name_top">Nome da lista:</label>
-      <input
-        id="name_top"
-        
-        name="name_top"
-        value={form.name_top}
-        onChange={handleChange}
-      />
-     
-      <label htmlFor="comida1">#1 Comida:</label>
-      <input
-        id="comida1"
-        placeholder="Batata frita"
-        name="comida1"
-        value={form.comida1}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="comida2">#2 Comida:</label>
-      <input
-        id="comida2"
-        placeholder="Batata frita"
-        name="comida2"
-        value={form.comida2}
-        onChange={handleChange}
-      />
-
-<label htmlFor="comida3">#3 Comida:</label>
-      <input
-        id="comida3"
-        placeholder="Batata frita"
-        name="comida3"
-        value={form.comida3}
-        onChange={handleChange}
-        />
-
-  <label htmlFor="comida4">#4 Comida:</label>
-      <input
-        id="comida4"
-        placeholder="Batata frita"
-        name="comida4"
-        value={form.comida4}
-        onChange={handleChange}
-        />
-
-        <label htmlFor="comida5">#5 Comida:</label>
-      <input
-        id="comida5"
-        placeholder="Batata frita"
-        name="comida5"
-        value={form.comida5}
-        onChange={handleChange}
-        />
-
-      
-
-      
-
-      <label htmlFor="bebida1">#1 Bebida:</label>
-      <input
-        id="bebida1"
-        name="bebida1"
-        value={form.bebida1}
-        onChange={handleChange}
-      />
-     
-     <label htmlFor="bebida2">#2 Bebida:</label>
-      <input
-        id="bebida2"
-        name="bebida2"
-        value={form.bebida2}
-        onChange={handleChange}
-      />
-
-<label htmlFor="bebida3">#3 Bebida:</label>
-      <input
-        id="bebida3"
-        name="bebida3"
-        value={form.bebida3}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="bebida4">#4 Bebida:</label>
-      <input
-        id="bebida4"
-        name="bebida4"
-        value={form.bebida4}
-        onChange={handleChange}
-      />
-
-<label htmlFor="bebida5">#5 Bebida:</label>
-      <input
-        id="bebida5"
-        name="bebida5"
-        value={form.bebida5}
-        onChange={handleChange}
-      />
-
-
-
-      <label htmlFor="filme1">#1 Filme:</label>
-      <input
-        id="filme1"
-        name="filme1"
-        value={form.filme1}
-        onChange={handleChange}
-      />
-
-<label htmlFor="filme2">#2 Filme:</label>
-      <input
-        id="filme2"
-        name="filme2"
-        value={form.filme2}
-        onChange={handleChange}
-      />
-
-<label htmlFor="filme3">#3 Filme:</label>
-      <input
-        id="filme3"
-        name="filme3"
-        value={form.filme3}
-        onChange={handleChange}
-      />
-
-<label htmlFor="filme4">#4 Filme:</label>
-      <input
-        id="filme4"
-        name="filme4"
-        value={form.filme4}
-        onChange={handleChange}
-      />
-
-<label htmlFor="filme5">#5 Filme:</label>
-      <input
-        id="filme5"
-        name="filme5"
-        value={form.filme5}
-        onChange={handleChange}
-      />
-
-    <label htmlFor="serie1">#1 Serie:</label>
-      <input
-        id="serie1"
-        name="serie1"
-        value={form.serie1}
-        onChange={handleChange}
-      />
-<label htmlFor="serie2">#2 Serie:</label>
-      <input
-        id="serie2"
-        name="serie2"
-        value={form.serie2}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="serie3">#3 Serie:</label>
-      <input
-        id="serie3"
-        name="serie3"
-        value={form.serie3}
-        onChange={handleChange}
-      />
-
-<label htmlFor="serie4">#4 Serie:</label>
-      <input
-        id="serie4"
-        name="serie4"
-        value={form.serie4}
-        onChange={handleChange}
-      />
-
-<label htmlFor="serie5">#5 Serie:</label>
-      <input
-        id="serie5"
-        name="serie5"
-        value={form.serie5}
-        onChange={handleChange}
-      />
-
-
-    <label htmlFor="banda1">#1 Banda:</label>
-      <input
-        id="banda1"
-        name="banda1"
-        value={form.banda1}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="banda2">#2 Banda:</label>
-      <input
-        id="banda2"
-        name="banda2"
-        value={form.banda2}
-        onChange={handleChange}
-      />
-
-<label htmlFor="banda3">#3 Banda:</label>
-      <input
-        id="banda3"
-        name="banda3"
-        value={form.banda3}
-        onChange={handleChange}
-      />
-
-<label htmlFor="banda4">#4 Banda:</label>
-      <input
-        id="banda4"
-        name="banda4"
-        value={form.banda4}
-        onChange={handleChange}
-      />
-
-<label htmlFor="banda5">#5 Banda:</label>
-      <input
-        id="banda5"
-        name="banda5"
-        value={form.banda5}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="img_filme">Link foto filme:</label>
-      <input id="img_filme" name="img_filme" value={form.img_filme} onChange={handleChange} />
-      <label htmlFor="img_serie">Link foto filme:</label>
-      <input id="img_serie" name="img_serie" value={form.img_serie} onChange={handleChange} />
-      <button type="submit">Submit 5</button>
-    </form>
-    </div>
+      </form>
     </div>
   );
 }

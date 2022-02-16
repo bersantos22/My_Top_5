@@ -7,38 +7,155 @@ export function EditTop5(){
     const params = useParams();
     const [form, setForm] = useState({
 
-        name_owner:"",
-        name_top:"",
-        comida1: "",
-        comida2: "",
-        comida3: "",
-        comida4: "",
-        comida5: "",
-        bebida1: "",
-        bebida2: "",
-        bebida3: "",
-        bebida4: "",
-        bebida5: "",
-        filme1: "",
-        filme2: "",
-        filme3: "",
-        filme4: "",
-        filme5: "",
-        serie1: "",
-        serie2: "",
-        serie3: "",
-        serie4: "",
-        serie5: "",
-        banda1: "",
-        banda2: "",
-        banda3: "",
-        banda4: "",
-        banda5: "",
-        img_filme: "",
-        img_serie: "",
+      name_owner: "",
+      name_top: "",
+      comidas: [
+        {
+          comida1: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          comida2: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          comida3: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          comida4: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          comida5: "",
+          picture: "",
+          ranking: 0
+        }
+      ],
+      bebidas: [
+        {
+          bebida1: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          bebida2: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          bebida3: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          bebida4: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          bebida5: "água",
+          picture: "",
+          ranking: 0
+        }
+      ],
+      filmes: [
+        {
+          filme1: "",
+          picture: "",
+          ranking: 0,
+          comentario: ""
+        },
+        {
+          filme2: "",
+          picture: "",
+          ranking: 0,
+          comentario: ""
+        },
+        {
+          filme3: "",
+          picture: "",
+          ranking: 0,
+          comentario: ""
+        },
+        {
+          filme4: "",
+          picture: "",
+          ranking: 0,
+          comentario: ""
+        },
+        {
+          filme5: "",
+          picture: "",
+          ranking: 0,
+          comentario: ""
+        }
+      ],
+      serie: [
+        {
+          serie1: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          serie2: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          serie3: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          serie4: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          serie5: "",
+          picture: "",
+          ranking: 0
+        }
+      ],
+      banda: [
+        {
+          banda1: "",
+          picture: "",
+          ranking: 1
+        },
+        {
+          banda2: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          banda3: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          banda4: "",
+          picture: "",
+          ranking: 0
+        },
+        {
+          banda5: "r",
+          picture: "",
+          ranking: 0
+        }
+      ]
+    }
+  ]
+  
     });
+
     useEffect(()=>{
-        async function fetchTop5{
+        async function fetchTop5(){
         try{
             const response = await axios.get(
                 `https://ironrest.herokuapp.com/mytop5/${params.id}`
@@ -110,16 +227,16 @@ export function EditTop5(){
         onChange={handleChange}
       />
      
-      <label htmlFor="comida1">#1 Comida:</label>
+      <label htmlFor="comida1"> Comidas:</label>
       <input
         id="comida1"
-        placeholder="Batata frita"
-        name="comida1"
-        value={form.comida1}
+        placeholder=""
+        name="comida"
+        value={form.comidas.comida1}
         onChange={handleChange}
       />
 
-      <label htmlFor="comida2">#2 Comida:</label>
+      <label htmlFor="comida2"> Comida:</label>
       <input
         id="comida2"
         placeholder="Batata frita"
