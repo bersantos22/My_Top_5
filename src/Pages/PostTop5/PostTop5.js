@@ -30,15 +30,15 @@ export function PostTop() {
     ranking: 0,
     image: "",
     description: "",
-  });
-  const [series, setSeries] = useState({
-    seriesName: "",
+});
+    const [movies, setMovies] = useState({
+    moviesName: "",
     ranking: 0,
     image: "",
     description: "",
-  });
-  const [movies, setMovies] = useState({
-    moviesName: "",
+    });
+  const [series, setSeries] = useState({
+    seriesName: "",
     ranking: 0,
     image: "",
     description: "",
@@ -76,6 +76,10 @@ export function PostTop() {
       ...listInfo,
       foods: [...infosToSubmit.foods, { ...foods }],
       drinks: [...infosToSubmit.drinks, { ...drinks }],
+      movies: [...infosToSubmit.movies, { ...movies }],
+      series: [...infosToSubmit.series, { ...series }],
+      bands: [...infosToSubmit.bands, { ...bands }],
+
     });
 
     console.log(infosToSubmit);
