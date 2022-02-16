@@ -6,7 +6,10 @@ export function NavBar(){
     return (
        
             <nav>
-                <h2>MyTop 5</h2>
+                <Link                                     className="nav-link myTop" 
+                to="/"
+                >MyTop 5
+                </Link>
                 <div className='linksPage'>
                         <ul className='listUl'>
 
@@ -41,7 +44,7 @@ export function NavBar(){
                             <li className='listLi'>
 
                                 <Link 
-                                    className='Link-Nav' 
+                                    className='nav-link' 
                                     to="/aboutUs">About The Project
                                 </Link>
                             

@@ -25,6 +25,7 @@ nav{
 }
 
 
+
 .listUl{
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -42,4 +43,11 @@ nav a{
 
 .listLi{
     padding: 20px;
+}
+
+.nav-link:hover{
+    color:#df6322;
+}
+.myTop:hover{
+    color:#fb3742;
 }

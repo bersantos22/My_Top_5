@@ -8,6 +8,8 @@ import { PostMyTop } from "./Pages/PostTop5";
 import { Top5 } from "./Pages/Top5";
 import { AllTop5 } from "./Pages/AllTop5";
 import { AboutUs } from "./Pages/AboutUs/AboutUs";
+import { PostTop } from "./Pages/PostTop5/PostTop5";
+
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
         <Route path="/user-top-5/:id" element={<Top5/>}/>
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/postTop5" element={<PostTop />} />
 
 
      </Routes>

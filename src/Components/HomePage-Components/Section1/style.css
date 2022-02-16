@@ -31,18 +31,20 @@
 }
 .smallTextTop{
     display: flex;
-    font-family: Oswald;
+    font-family: 'Oswald';
     color:#3b908a;
     font-size: 40px;
     font-display: swap;
+    font-weight: bold;
 }
 .smallTextBot{
     display: flex;
-    font-family: Oswald;
+    font-family: 'Oswald';
     color:
     #fb3742;
     font-size: 40px;
     font-display: swap;
+    font-weight:lighter;
 }
 
 .BigCard{
