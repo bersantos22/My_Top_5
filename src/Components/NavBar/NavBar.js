@@ -11,10 +11,17 @@ export function NavBar(){
                         <ul className='listUl'>
                             <li className='listLi'>
 
+                            
+                            <Link className="nav-link text-light" to="/">
+                                Home
+                                </Link>
+
+
                             <Link 
                             className='Link-Nav'
                             to='/'
                             >Home</Link>
+
                             </li>
                             <li className='listLi'>
                             
@@ -24,8 +31,24 @@ export function NavBar(){
                             </li>
                             <li className='listLi'>
 
+                                <Link lassName="nav-link text-light" to="/aboutus">
+                                About Us
+                                </Link>
+                            
+                                {/* LINK AQUI */}
+
+
                             <Link className='Link-Nav' to="/aboutUs">About Us</Link>
                             
+
+                            </li>
+
+                            <li className='listLi'>
+                                <Link lassName="nav-link text-light" to="/alltop5">
+                                All Top 5
+                                </Link>
+                            
+                               
                             </li>
                         </ul>
                 </div>

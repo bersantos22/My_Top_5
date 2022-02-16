@@ -22,7 +22,7 @@ export function Section3(){
                         <img className='photo' src={photoLenine} alt='DevPhoto'/>
 
                         <div className="TextDev">
-                            <p>Abou the developer Lenine ! Lorem Ipsum is simply dummy text of the printing and typesettin Lorem Ipsum is simply dumm</p>
+                            <p> Longbaord is life. A little music, a little partying, some bad movies that are really good, some good series, from Diogo Nogueira to John Williams, from Hans Zimmer to Pennywise. Make your top 5.</p>
 
                             <p><a href='https://www.instagram.com/leninexavier/'><i className="fa-brands fa-instagram"></i> leninexavier</a></p>
                         </div>

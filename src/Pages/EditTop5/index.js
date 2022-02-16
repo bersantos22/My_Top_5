@@ -1,67 +1,89 @@
 import { useState } from "react";
 import axios from "axios";
-import "./style.module.css"
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
+export function EditTop5(){
+    const params = useParams();
+    const [form, setForm] = useState({
 
+        name_owner:"",
+        name_top:"",
+        comida1: "",
+        comida2: "",
+        comida3: "",
+        comida4: "",
+        comida5: "",
+        bebida1: "",
+        bebida2: "",
+        bebida3: "",
+        bebida4: "",
+        bebida5: "",
+        filme1: "",
+        filme2: "",
+        filme3: "",
+        filme4: "",
+        filme5: "",
+        serie1: "",
+        serie2: "",
+        serie3: "",
+        serie4: "",
+        serie5: "",
+        banda1: "",
+        banda2: "",
+        banda3: "",
+        banda4: "",
+        banda5: "",
+        img_filme: "",
+        img_serie: "",
+    });
+    useEffect(()=>{
+        async function fetchTop5{
+        try{
+            const response = await axios.get(
+                `https://ironrest.herokuapp.com/mytop5/${params.id}`
+            );
+            console.log(response);
+            setForm({...response.data});
+        }catch(error){
+            console.error(error);
+        }
+        }
+        
+        fetchTop5();
+        
+    },[]);
 
-export function PostMyTop() {
-  
-
-  const [form, setForm] = useState({
-    name_owner:"",
-    name_top:"",
-    comida1: "",
-    comida2: "",
-    comida3: "",
-    comida4: "",
-    comida5: "",
-    bebida1: "",
-    bebida2: "",
-    bebida3: "",
-    bebida4: "",
-    bebida5: "",
-    filme1: "",
-    filme2: "",
-    filme3: "",
-    filme4: "",
-    filme5: "",
-    serie1: "",
-    serie2: "",
-    serie3: "",
-    serie4: "",
-    serie5: "",
-    banda1: "",
-    banda2: "",
-    banda3: "",
-    banda4: "",
-    banda5: "",
-    img_filme: "",
-    img_serie: "",
-  });
-
-  
-  function handleChange(event) {
-    setForm({ ...form, [event.target.name]: event.target.value });
-    console.log(form);
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    for (let key in form) {
-      if (!form[key]) {
-        window.alert(`Faltou o campo ${key}.`);
-        return;
-      }
+    function handleChange(event){
+        setForm({...form, [event.target.name_owner]:event.target.value});
+        console.log(form)
     }
+      
+    function handleSubmit(event) {
+        event.preventDefault();
+    
+        for (let key in form) {
+          if (!form[key]) {
+            window.alert(`Peencher o campo ${key}.`);
+            return;
+          }
+        }
 
-    console.log("Nao caiu no if");
-    axios.post("https://ironrest.herokuapp.com/mytop5", form);
-  }
+        delete form._id;
+    axios
+      .put(`https://ironrest.herokuapp.com/mytop5/${params.id}`, form)
+      .then((result) => console.log(result))
+      .catch((error) => {
+        console.error(error);
+      });
 
-  return (
-   
-    <div className="container">
+    }    
+
+
+     return(
+
+
+        <div className="container">
    
     <div className="fomulario">
 
@@ -307,6 +329,7 @@ export function PostMyTop() {
     </form>
     </div>
     </div>
-  );
-}
 
+     )   
+
+}
