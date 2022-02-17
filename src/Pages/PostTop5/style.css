@@ -3,11 +3,12 @@
 
 .container1{
 
-  padding: 40px !important;
+  padding: 50px !important;
   margin-top: 30px;
-  margin-bottom: 70px;
-  margin-right: 250px;
-  margin-left: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family:"Source Sans Pro" !important;
   font-size: 22px;
   color:#1a4e4b;
@@ -15,6 +16,24 @@
   justify-content: space-evenly !important; */
 
 
+}
+
+.inputSingle-div{
+
+width: 800px;
+height: 270px;
+padding: 10px;
+ /*  display: flex;
+  flex-direction: row;
+  align-items: center;
+  just
+  ify-content: center; */
+}
+.owner{
+  height: 110px;
+}
+.input{
+  width:100%;
 }
 /* 
  .is-success {
@@ -30,7 +49,7 @@
 }
 
 .labelClass{
-    padding: 15px;
+    padding: 10px;
     
 }
 
@@ -41,4 +60,10 @@
     font-size: 40px;
     font-display: swap;
     font-weight:bold;
+}
+
+.btnForms{
+  display: flex;
+  justify-content: end;
+  padding-right: 20px;
 }

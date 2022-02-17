@@ -6,6 +6,50 @@ import { FooterPage } from "../../Components/HomePage-Components/FooterPage/Foot
 import axios from "axios";
 
 export function PostYourTop5(){
+    const [forms, setForms] = useState({
+     
+        name:'',
+
+        name_m:'',
+        image_m:'',
+        description_m:'',
+
+        name_s:'',
+        image_s:'',
+        description_s:'',
+
+        name_b:'',
+        image_b:'',
+        description_b:'',
+
+        name_d:'',
+        image_d:'',
+        description_d:"",
+        
+        name_f:'',
+        image_f:'',
+        description_f:'',
+      });
+    
+      
+      function handleChange(event) {
+        setForms({ ...forms, [event.target.name]: event.target.value });
+        console.log(forms);
+      }
+    
+      function handleSubmit(event) {
+        event.preventDefault();
+    
+        for (let key in forms) {
+          if (!forms[key]) {
+            window.alert(`Faltou o campo ${key}.`);
+            return;
+          }
+        }
+    
+        console.log("Nao caiu no if");
+        axios.post("https://ironrest.herokuapp.com/mytop5", forms);
+      }
 
         const [top5, setTop5] = useState({
             name:"",
