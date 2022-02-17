@@ -1,4 +1,4 @@
-import { Card } from "../../Components/Card/cards-ber";
+/* import { Card } from "../../Components/Card/cards-ber";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -46,4 +46,4 @@ export function Top5(){
         
         </>
     );
-}
+} */

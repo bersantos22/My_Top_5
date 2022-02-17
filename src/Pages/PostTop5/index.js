@@ -50,35 +50,51 @@ export function PostTop() {
     description: "",
   });
 
+
   function handleChange(event) {
     setListInfo({ ...listInfo, [event.target.name]: event.target.value });
   }
 
-  function handleFoods(event) {
-    setFoods({ ...foods, [event.target.name]: event.target.value });
+console.log(listInfo)
+  function handleFoods(event)
+
+   {
+     if(event.target.value !== ""){
+      setFoods({ ...foods, [event.target.name]: event.target.value });
+     }
+    
   }
+  console.log(foods)
   function handleDrinks(event) {
     setDrinks({ ...drinks, [event.target.name]: event.target.value });
   }
-
+  console.log(drinks)
   function handleSeries(event) {
     setSeries({ ...series, [event.target.name]: event.target.value });
   }
+  console.log(series)
   function handleMovies(event) {
     setMovies({ ...movies, [event.target.name]: event.target.value });
   }
+  console.log(movies)
   function handleBands(event) {
     setBands({ ...bands, [event.target.name]: event.target.value });
   }
-
+  console.log(bands)
   function handleAddItem() {
+
+    
+
     setInfosToSubmit({
       ...listInfo,
       foods: [...infosToSubmit.foods, { ...foods }],
       drinks: [...infosToSubmit.drinks, { ...drinks }],
-    });
+      series:[...infosToSubmit.series, {...series}],
+      movies:[...infosToSubmit.movies, {...movies}],
+      bands:[...infosToSubmit.bands, {...bands}]
+      });
 
-    console.log(infosToSubmit);
+    console.log("Info", infosToSubmit.drinks);
 
     setFoods({
       foodName: "",
@@ -94,9 +110,30 @@ export function PostTop() {
       description: "",
     });
 
+    setSeries({
+     seriesName:"",
+     ranking:0,
+     image:"" ,
+     description:"",
+    });
+
+    setMovies({
+      moviesName:"",
+     ranking:0,
+     image:"" ,
+     description:"",
+    });
+
+    setBands({
+      bandsName:"",
+      ranking:0,
+     image:"" ,
+     description:"",
+    });
     
 
   }
+  console.log("Aqui jaz", infosToSubmit);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -107,6 +144,14 @@ export function PostTop() {
         return;
       }
     }
+    const result = infosToSubmit.filter((element)=>{
+      console.log(element)
+      
+    })
+
+    const resultFoods = infosToSubmit.filter((element)=>{
+      console.log(element.foods)
+    })
 
     console.log("Nao caiu no if");
     axios.post("https://ironrest.herokuapp.com/mytop5", infosToSubmit);
