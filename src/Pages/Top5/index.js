@@ -2,12 +2,13 @@ import { Card } from "../../Components/Card/cards-ber";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import './index.css'
 
 //págia de cards
 export function Top5(){
     const {id}= useParams();
     const [top5, setTop5] = useState([]);
-    const [newrender, setNewrender] = useState(true);
+   /*  const [newrender, setNewrender] = useState(true); */
 
     useEffect(()=>{
         async function fetchTop5(){
@@ -15,7 +16,7 @@ export function Top5(){
                 const result = await axios.get(
                     `https://ironrest.herokuapp.com/mytop5/${id}`
                 );
-                
+
                 setTop5({...result.data});
             }catch(err){
                 console.error(err);
@@ -23,14 +24,37 @@ export function Top5(){
         }
 
         fetchTop5();
-        //setNewrender(false);
+
 
     },[]);
 
     return(
 
         <>
-        
+
+ 
+        <section className='sectionAll'>
+            
+            <div className="textAll">
+
+            <div className="smallTextTop">
+                <p>My Top 5 </p>
+            </div>
+
+            <div className='bigText'>
+                <p>THIS IS THE BEST</p>
+            </div>
+            <div className='nameTop5'>
+                <p>Top 5 of  {top5.name}</p>
+            </div>
+            </div>
+
+        </section>
+
+        <section>
+            
+      
+
         
                <Card
                 id={top5._id}
@@ -59,12 +83,11 @@ export function Top5(){
                 description_f={top5.description_f}
 
                 
-                
-                />
-           
-     
-
         
-        </>
-    );
+                />
+  </section>
+                </>
+            )
+    
+    
 }
