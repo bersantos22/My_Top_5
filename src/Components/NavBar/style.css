@@ -57,6 +57,18 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 130px;
+    padding-left: 100px;
+    height: 200px;
+
+}
+.listUl{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    list-style-type: none;
+    padding-right: 50px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 100px;
+    text-align: center;
 }
 }
