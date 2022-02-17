@@ -23,15 +23,14 @@ export function Card(props){
 
         <div className='card-base card-one'>
                 <div className='imgCards'>
-                    <img src={props.img} alt='ImgCard' />
+                    <img src={props.image_m} alt='ImgCard' />
                 </div>
 
                 <div className='btn-base btn-one'>
-                    <p> #1 GOLD</p>
+                    <p> #MOVIE</p>
                 </div>
 
                 <div className='textCards'>
-                    <p>{props.type}</p>
                     <p className='p-name'><b>{props.name}</b></p>
                     <p> {props.subtitle} </p>
                 </div>
@@ -47,15 +46,15 @@ export function Card(props){
         <div className='card-base card-two'>
 
                 <div className='imgCards'>
-                    <img src={props.img} alt='ImgCard' />
+                    <img src={props.image_s} alt='ImgCard' />
                 </div>
 
                 <div className='btn-base btn-two'>
-                    <p> #2 SILVER </p>
+                    <p> #TVSERIE </p>
                 </div>
 
                 <div className='textCards'>
-                    <p>{props.type}</p>
+                    
                     <p className='p-name'><b>{props.name}</b></p>
                     <p>{props.subtitle}</p>
                 </div>
@@ -70,11 +69,11 @@ export function Card(props){
         <div className='card-base card-three'>
 
                 <div className='imgCards'>
-                    <img src={props.img} alt='ImgCard' />
+                    <img src={props.image_d} alt='ImgCard' />
                 </div>
 
                 <div className='btn-base btn-three'>
-                        <p>#3 BRONZE </p>
+                        <p>#DRINK </p>
                 </div>
 
                 <div className='textCards'>
@@ -93,11 +92,11 @@ export function Card(props){
 
         <div className='card-base card-four'>
                 <div className='imgCards'>
-                    <img src={props.img} alt='ImgCard' />
+                    <img src={props.image_b} alt='ImgCard' />
                 </div>
 
                 <div className='btn-base btn-four'>
-                        <p>#4 FOURTH </p>
+                        <p>#BAND </p>
                 </div>
 
                 <div className='textCards'>
@@ -117,11 +116,11 @@ export function Card(props){
         <div className='card-base card-five'>
 
                 <div className='imgCards'>
-                    <img src={props.img} alt='ImgCard' />
+                    <img src={props.image_f} alt='ImgCard' />
                 </div>
 
                 <div className='btn-base btn-five'>
-                        <p>#5 FIFTH </p>
+                        <p>#FOOD </p>
                 </div>
 
                 <div className='textCards'>

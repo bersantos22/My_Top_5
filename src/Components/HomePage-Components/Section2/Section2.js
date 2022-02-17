@@ -17,7 +17,7 @@ export function Section2(){
                 <p>Musics</p>
                 <div className='textImg'>
                     
-                    <p>What are your top 5 bands?</p>
+                    <p>What is the best band?</p>
                 </div>
             </div>
             
@@ -47,7 +47,7 @@ export function Section2(){
                 </div>
                 <p>Foods</p>
                 <div className='textImg'>
-                    <p>1.Pizza 2.Barbecue</p>
+                    <p>1.Pizza or 1.Barbecue</p>
                 </div>
             </div>
 
