@@ -4,8 +4,11 @@ import "./style.css"
 import 'bulma/css/bulma.css'; 
 import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 export function PostYourTop5(){
+    const navigate = useNavigate()
+   
     const [form, setForm] = useState({
      
         name:'',
@@ -33,8 +36,9 @@ export function PostYourTop5(){
     
       
       function handleChange(event) {
+        console.log("to mudando");
         setForm({ ...form, [event.target.name]: event.target.value });
-        console.log(form);
+        
       }
     
       function handleSubmit(event) {
@@ -48,7 +52,9 @@ export function PostYourTop5(){
         }
     
         console.log("Temos um probleminha");
-        axios.post("https://ironrest.herokuapp.com/mytop5", form);
+        axios.post("https://ironrest.herokuapp.com/mytop5", form).then(()=>{
+            navigate("/alltop5")
+        });
       }
 
               
