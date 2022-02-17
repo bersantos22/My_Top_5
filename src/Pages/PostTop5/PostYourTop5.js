@@ -27,22 +27,197 @@ export function PostYourTop5(){
 
         <form onSubmit={handleSubmit}>
 
-            <div className='inputSingle-div'>
+{/* OWNDER'S NAME */}
+            <div className='inputSingle-div owner'>
 
                 <div className='input-div'>
-                    <label className='labelClass' htmlFor="name_owner">Your name:</label>
-                        <input
-                        className="input is-info"
-                        placeholder="Owner's Name"
-                        name="name"
-                        value={forms.name}  
-                        onChange={handleChange}      
-                        />
+
+                    <label className='labelClass' htmlFor="name">Your name:</label>
+                    <input
+                    className="input is-info"
+                    placeholder="Owner's Name"
+                    name="name"
+                    value={forms.name}  
+                    onChange={handleChange}      
+                    />
                 </div>
 
+            </div>
+
+{/* MOVIES */}
+                <div className='inputSingle-div'>
+
+                    <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="movieName">Movie name:</label>
+                        <input
+                        className="input is-info"
+                        placeholder="Name of your favorite Movie"
+                        name="movieName"
+                        value={forms.name_m}
+                        onChange={handleChange}                       
+                        />
+
+                    </div>
+
+                        <div className='input-div'>
+
+                            <label className='labelClass' htmlFor="imgMovie">Image Link:</label>
+                            <input
+                            className="input is-info"
+                            placeholder="Movie image Link "
+                            name="imgMovie"
+                            value={forms.image_m}
+                            onChange={handleChange}                      
+                            />
+                        </div>
+
+                        <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="descriptionMovie">Movie description:</label>
+                        <input
+                        className="input is-info"
+                        placeholder="Short description of the movie"
+                        name="descriptionMovie"
+                        value={forms.description_m}
+                        onChange={handleChange}                        
+                        />
+
+                        </div>
+
+                </div>
+
+{/* TvSeries */}
+                <div className='inputSingle-div'>
+
                 <div className='input-div'>
 
-                    <label className='labelClass' htmlFor="name_food">Food name:</label>
+                    <label className='labelClass' htmlFor="serieName">TvSerie name:</label>
+                    <input
+                    className="input is-info"
+                    placeholder="Name of your favorite TvSerie"
+                    name="serieName"
+                    value={forms.name_s}
+                    onChange={handleChange}                       
+                    />
+
+                </div>
+
+                    <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="imgSerie">Image Link:</label>
+                        <input
+                        className="input is-info"
+                        placeholder="TvSerie image Link "
+                        name="imgSerie"
+                        value={forms.image_s}
+                        onChange={handleChange}                      
+                        />
+                    </div>
+
+                    <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="descriptionTvSerie">TvSerie description:</label>
+                        <input
+                        className="input is-info"
+                        placeholder="Why is this your favorite TvShow?"
+                        name="descriptionTvSerie"
+                        value={forms.description_s}
+                        onChange={handleChange}                        
+                        />
+
+                    </div>
+
+                </div> 
+
+                <div className='inputSingle-div'>
+
+                    <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="drinkName">Drink name:</label>
+                        <input
+                        className="input is-info"
+                        placeholder="Name of your favorite drink"
+                        name="drinkName"
+                        value={forms.name_d}
+                        onChange={handleChange}                       
+                        />
+                    </div>
+
+                        <div className='input-div'>
+
+                            <label className='labelClass' htmlFor="imgDrink">Image Link:</label>
+                            <input
+                            className="input is-info"
+                            placeholder="Drink image Link "
+                            name="imgDrink"
+                            value={forms.image_d}
+                            onChange={handleChange}                      
+                            />
+                        </div>
+
+                        <div className='input-div'>
+
+                            <label className='labelClass' htmlFor="descriptionDrink">Drink description:</label>
+                            <input
+                            className="input is-info"
+                            placeholder="A description of your favorite drink"
+                            name="descriptionDrink"
+                            value={forms.description_d}
+                            onChange={handleChange}                        
+                            />
+                            </div>
+
+                </div>  
+{/* BANDS */}
+                <div className='inputSingle-div'>
+
+                    <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="bandName">Band name:</label>
+                        <input
+                        className="input is-info"
+                        placeholder="Name of your favorite band"
+                        name="bandName"
+                        value={forms.name_b}
+                        onChange={handleChange}                       
+                        />
+
+                    </div>
+
+                        <div className='input-div'>
+
+                            <label className='labelClass' htmlFor="imgBand">Image Link:</label>
+                            <input
+                            className="input is-info"
+                            placeholder="Band image Link "
+                            name="imgBand"
+                            value={forms.image_b}
+                            onChange={handleChange}                      
+                            />
+                        </div>
+
+                        <div className='input-div'>
+
+                            <label className='labelClass' htmlFor="descriptionBand">Band Songs:</label>
+                            <input
+                            className="input is-info"
+                            placeholder="The best songs by this band"
+                            name="descriptionBand"
+                            value={forms.description_b}
+                            onChange={handleChange}                        
+                            />
+
+                        </div>
+
+                </div>
+
+{/* Foods */}
+                <div className='inputSingle-div'>
+
+                    <div className='input-div'>
+
+                        <label className='labelClass' htmlFor="foodName">Food name:</label>
                         <input
                         className="input is-info"
                         placeholder="Name of your favorite food"
@@ -51,11 +226,11 @@ export function PostYourTop5(){
                         onChange={handleChange}                       
                         />
 
-                </div>
+                    </div>
 
-                    <div className='input-div'>
+                        <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="name_food">Image Link:</label>
+                            <label className='labelClass' htmlFor="imgFood">Image Link:</label>
                             <input
                             className="input is-info"
                             placeholder="Food image Link "
@@ -63,24 +238,26 @@ export function PostYourTop5(){
                             value={forms.image_f}
                             onChange={handleChange}                      
                             />
-                    </div>
+                        </div>
 
-                    <div className='input-div'>
+                        <div className='input-div'>
 
-                    <label className='labelClass' htmlFor="name_food">Food description:</label>
-                        <input
-                        className="input is-info"
-                        placeholder="A description of this food"
-                        name="descriptionFood"
-                        value={forms.description_f}
-                        onChange={handleChange}                        
-                        />
+                            <label className='labelClass' htmlFor="descriptionFood">Food description:</label>
+                            <input
+                            className="input is-info"
+                            placeholder="A description of your favorite food"
+                            name="descriptionFood"
+                            value={forms.description_f}
+                            onChange={handleChange}                        
+                            />
 
-                    </div>
+                        </div>
 
-                    </div>              
+                </div>
+
                 </form>
-            </div>   
+            </div>
+            <FooterPage/>   
         </>
     )
 }
