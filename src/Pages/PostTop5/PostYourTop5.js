@@ -255,6 +255,10 @@ export function PostYourTop5(){
 
                 </div>
 
+                <div className='btnForms'>
+                    <button className="button is-success" type="submit">Submit Forms</button>
+                </div>
+
                 </form>
             </div>
             <FooterPage/>   

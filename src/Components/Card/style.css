@@ -11,7 +11,7 @@
      
     .card-base{
         width:280px;
-        height: 550px;
+        height: 520px;
         margin: 25px;
         border-radius: 40px;
         box-shadow: 2px 2px 22px rgba(0,0,0,0.2);
@@ -25,7 +25,7 @@
 /* IMG CARD */
     .imgCards{
         width:280px;
-        height: 250px;
+        height: 280px;
         border-radius: 40px;
         background-size: 100%;
     
@@ -70,7 +70,7 @@
 
         color:#1f2222;
         width: 250px;
-        height: 180px;
+        height: 130px;
         padding-left: 20px;
         padding-right: 5px;
         font-size:18px;
@@ -129,7 +129,7 @@
     }
 
     .btn-div{
-        padding-left: 50px;
+        padding-left: 60px;
     }
 
     @media (max-width:1350px) {

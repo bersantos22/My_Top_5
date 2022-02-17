@@ -31,8 +31,8 @@ export function Card(props){
                 </div>
 
                 <div className='textCards'>
-                    <p className='p-name'><b>{props.name}</b></p>
-                    <p> {props.subtitle} </p>
+                    <p className='p-name'><b>{props.name_m}</b></p>
+                    <p> {props.description_m} </p>
                 </div>
 
                 <div className='btn-div'>
@@ -55,8 +55,8 @@ export function Card(props){
 
                 <div className='textCards'>
                     
-                    <p className='p-name'><b>{props.name}</b></p>
-                    <p>{props.subtitle}</p>
+                    <p className='p-name'><b>{props.name_s}</b></p>
+                    <p>{props.description_s}</p>
                 </div>
 
                 <div className='btn-div'>
@@ -77,9 +77,9 @@ export function Card(props){
                 </div>
 
                 <div className='textCards'>
-                        <p>{props.type}</p>
-                        <p className='p-name'><b>{props.name}</b></p>
-                        <p>{props.subtitle}</p>
+                
+                        <p className='p-name'><b>{props.name_d}</b></p>
+                        <p>{props.description_d}</p>
                 </div>
 
                 <div className='btn-div'>
@@ -100,9 +100,8 @@ export function Card(props){
                 </div>
 
                 <div className='textCards'>
-                        <p>{props.type}</p>
-                        <p className='p-name'><b>{props.name}</b></p>
-                        <p>{props.subtitle}</p>
+                        <p className='p-name'><b>{props.name_b}</b></p>
+                        <p>{props.description_b}</p>
                 </div>    
 
                 <div className='btn-div'>
@@ -124,9 +123,9 @@ export function Card(props){
                 </div>
 
                 <div className='textCards'>
-                        <p>{props.type}</p>
-                        <p className='p-name'><b>{props.name}</b></p>
-                        <p>{props.subtitle} </p>
+
+                        <p className='p-name'><b>{props.name_f}</b></p>
+                        <p>{props.description_f} </p>
                 </div>
 
                 <div className='btn-div'>
