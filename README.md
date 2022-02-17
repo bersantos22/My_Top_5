@@ -23,4 +23,4 @@ This Website was created by Bernardo Paes and Lenine Xavier.
 
 ## Create your Top  5 now :
 
-[Click Here to Play the Game](https://mytop5.netlify.app/)
+[Click Here to access My Top 5 !](https://mytop5.netlify.app/)
