@@ -99,4 +99,10 @@
     .section1{
         flex-direction: column;
     }
+    .divTextHero{
+    
+        width: 200px;
+        height: 950px;
+        padding: 15px;
+    }
 }
