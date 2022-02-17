@@ -28,3 +28,15 @@
     justify-content: center;
 
 }
+
+.nameTop5{
+    background-color: #262b2b;
+    font-family: 'Oswald';
+    color:
+    #fb3742;
+    font-size: 40px;
+    font-display: swap;
+    font-weight:bold;
+    padding-left: 50px;
+    padding-top: 30px;
+}

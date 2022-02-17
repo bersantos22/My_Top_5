@@ -48,7 +48,7 @@ useEffect(()=>{
         <div className='listTop5'>
             {names.map((currenteName)=>{
                 return (
-                    <Link className='linkALLTop' to={`/user-top-5/${currenteName._id}`}><h3>{currenteName.name_owner}</h3></Link>
+                    <Link className='linkALLTop' to={`/user-top-5/${currenteName._id}`}><h3>{currenteName.name}</h3></Link>
                 )
             })}
         </div>
