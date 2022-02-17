@@ -1,12 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-/* CARD BODY  */
+.topTextTop5{
+    display: flex;
+    justify-content: center;
+    font-family: 'Oswald';
+    color:
+    #fb3742;
+    font-size: 40px;
+    font-display: swap;
+    font-weight:bold;
+    padding-left: 50px;
+    padding-top: 30px;
+    background-color:#262b2b;
+}
+
+.sectionTop5{
+    display: flex;
+    padding: 25px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-family: 'Oswald';
+    background-color: #262b2b;
+    align-items: center;
+    width: auto;
+    height: auto;
+    justify-content: center;
+
+}
+
+/* teste */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Oswald:wght@700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Open+Sans&family=Oswald:wght@700&family=Yellowtail&display=swap');
+
+
+
+
+
+
 .card-container{
     font-family:"Source Sans Pro";
     display:flex;
     justify-content: center;
     flex-direction: row;
-   background-color:#ecebeb;
     }
      
     .card-base{
@@ -17,20 +55,23 @@
         box-shadow: 2px 2px 22px rgba(0,0,0,0.2);
     }
     .card-base:hover{
-        box-shadow: 2px 12px 32px rgba(0,0,0,0.5);
+        box-shadow: 2px 12px 32px rgba(0,0,0,0.7);
         margin-top: 20px;
-        cursor:pointer;
+       /*  cursor:pointer; */
     }
-
-/* IMG CARD */
     .imgCards{
-        width:280px;
-        height: 280px;
+        background-image: url('../../Components/images/ber.jfif');
+        height: 270px;
         border-radius: 40px;
         background-size: 100%;
+
+       
     
     }
-    
+    .div-botao{
+        padding-left: 60px;
+        
+    }
     .btn-base{
         display: flex;
         width: 180px;
@@ -39,19 +80,16 @@
         margin: 0 auto;
         margin-top: -25px;
         font-size: 30px;
-        color:white;
+        color:#ffffdd;
         justify-content: center;
         align-items: center;
+    
     }
-    /* BtN CENTER */
-
-    .p-name{
-        font-size: larger;
-        padding: 10px;
-    }
+    
     .btn-one{
         background-color:#dd9b22 ;
        
+     
     }
     .btn-two{
        background-color: #7c7a7a;
@@ -66,20 +104,18 @@
         background-color:#bd7b41;
     }
     
-    /* TEXT AREA CARD */
     .textCards{
-
+       
         color:#1f2222;
         width: 250px;
-        height: 130px;
+        height: 170px;
         padding-left: 20px;
         padding-right: 5px;
         font-size:18px;
-        padding-bottom: 10px;
+        padding-bottom: 30px;
     
     }
-    
-    /* CARDS BACKGROUNDS and BTN Background  */
+
     .btn1,
     .card-one{
         background-color: #f1c22e;
@@ -108,30 +144,51 @@
         border-color:#a3764f ;
     }
     
-/*  CSS BUTTON CARDS  */
-    .btn-Card{
-      
-        color:#262b2b;
+    button{
+        
+       color:#262b2b; 
+       /*  border:none; */
         font-weight: bold;
+        border-color: none;
         font-size: 20px;
         font-family:"Source Sans Pro";
         width: 75px;
         height: 32px;
         box-sizing: border-box;
         border-radius: 15px;
-        box-shadow: 2px 12px 32px rgba(0,0,0,0.2);
+       /*  box-shadow: 2px 12px 32px rgba(0,0,0,0.10); */
         padding-right: 10px;
         padding-bottom: 10px;
     }
-    .btn-Card:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
-        cursor:pointer;
+
+    .pAqui{
+        padding: 10px;
+        font-size: larger;
+      
     }
 
-    .btn-div{
-        padding-left: 60px;
+    
+    button:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(27, 27, 27, 0.9);
+     cursor:pointer;
     }
+    
+  
+    button::after {
+     content: "";
+     display: inline-block;
+     height: 100%;
+     width: 100%;
+     border-radius: 100px;
+     top: 0;
+     left: 0;
+     position: absolute;
+     z-index: -1;
+     transition: all .3s;
+    }
+    
+ 
 
     @media (max-width:1350px) {
         .card-container{
@@ -145,3 +202,4 @@
             flex-direction: column;
         }
     }
+    
