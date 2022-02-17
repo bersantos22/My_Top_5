@@ -34,9 +34,31 @@ export function Top5(){
         {top5.map((currentTop5)=>{
             return(
                 <Card
+                id={currentTop5._id}
                 key={currentTop5._id}
-                name_owner={currentTop5.name_owner}
-                setNewrender={setNewrender}
+
+                name={currentTop5.name}
+
+                name_m={currentTop5.name_m}
+                image_m={currentTop5.image_m}
+                description_m={currentTop5.description_m}
+
+                name_s={currentTop5.name_s}
+                image_s={currentTop5.image_s}
+                description_s={currentTop5.description_s}
+
+                name_b={currentTop5.name_b}
+                image_b={currentTop5.image_b}
+                description_b={currentTop5.description_b}
+
+                name_d={currentTop5.name_d}
+                image_d={currentTop5.image_d}
+                description_d={currentTop5.description_d}
+                
+                name_f={currentTop5.name_f}
+                image_f={currentTop5.image_f}
+                description_f={currentTop5.description_f}
+
                 
                 
                 />
