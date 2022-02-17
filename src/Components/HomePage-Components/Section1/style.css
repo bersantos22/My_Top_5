@@ -93,3 +93,10 @@
     box-shadow: 2px 12px 32px rgba(0,0,0,0.6);
     cursor:pointer;
 }
+
+@media (max-width:1350px) {
+    .section2,
+    .section1{
+        flex-direction: column;
+    }
+}

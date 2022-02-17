@@ -51,3 +51,12 @@ nav a{
 .myTop:hover{
     color:#fb3742;
 }
+
+@media (max-width:1350px) {
+nav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+}
+}
