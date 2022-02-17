@@ -1,9 +1,11 @@
-import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage";
+
 
 export function EditTop5(){
+   
     const params = useParams();
     const [form, setForm] = useState({
 
@@ -28,7 +30,7 @@ export function EditTop5(){
     },[]);
 
     function handleChange(event){
-        setForm({...form, [event.target.name_owner]:event.target.value});
+        setForm({...form, [event.target.name]:event.target.value});
         console.log(form)
     }
       
@@ -43,266 +45,287 @@ export function EditTop5(){
         }
 
         delete form._id;
+
     axios
       .put(`https://ironrest.herokuapp.com/mytop5/${params.id}`, form)
-      .then((result) => console.log(result))
+      .then((result) =>  {console.log(result);
+       window.location.href
+        ="/alltop5"})
       .catch((error) => {
         console.error(error);
       });
-
+      
     }    
 
 
-     return(
+    return(
+      <>
+          <section className='sectionAll'>
+  
+              <div className="textAll">
+
+                  <div className="smallTextTop">
+                      <p>Create your Top 5 is easy!</p>
+                  </div>
+
+                  <div className='textForms'>
+                      <p>Choose the best and fill our form with names, image links and description:</p>
+                  </div>
+
+              </div>
+</section>   
+  <div className="container1">
+
+      <form onSubmit={handleSubmit}>
 
 
-        <div className="container">
-   
-    <div className="fomulario">
+          <div className='inputSingle-div owner'>
 
-    
+              <div className='input-div'>
 
+                  <label  htmlFor="name">Your name:</label>
+                  <input
+                  className="input is-info"
+                  id="name"
+                  placeholder="Owner's Name"
+                  name="name"
+                  value={form.name}  
+                  onChange={handleChange}      
+                  />
+              </div>
 
-   <form onSubmit={handleSubmit}>
-     
-   <label htmlFor="name_owner">Listo do:</label>
-      <input
-        id="name_owner"
-        
-        name="name_owner"
-        value={form.name_owner}
-        onChange={handleChange}
-      />
-
-<label htmlFor="name_top">Nome da lista:</label>
-      <input
-        id="name_top"
-        
-        name="name_top"
-        value={form.name_top}
-        onChange={handleChange}
-      />
-     
-      <label htmlFor="comida1"> Comidas:</label>
-      <input
-        id="comida1"
-        placeholder=""
-        name="comida"
-        value={form.comidas.comida1}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="comida2"> Comida:</label>
-      <input
-        id="comida2"
-        placeholder="Batata frita"
-        name="comida2"
-        value={form.comida2}
-        onChange={handleChange}
-      />
-
-<label htmlFor="comida3">#3 Comida:</label>
-      <input
-        id="comida3"
-        placeholder="Batata frita"
-        name="comida3"
-        value={form.comida3}
-        onChange={handleChange}
-        />
-
-  <label htmlFor="comida4">#4 Comida:</label>
-      <input
-        id="comida4"
-        placeholder="Batata frita"
-        name="comida4"
-        value={form.comida4}
-        onChange={handleChange}
-        />
-
-        <label htmlFor="comida5">#5 Comida:</label>
-      <input
-        id="comida5"
-        placeholder="Batata frita"
-        name="comida5"
-        value={form.comida5}
-        onChange={handleChange}
-        />
-
-      
-
-      
-
-      <label htmlFor="bebida1">#1 Bebida:</label>
-      <input
-        id="bebida1"
-        name="bebida1"
-        value={form.bebida1}
-        onChange={handleChange}
-      />
-     
-     <label htmlFor="bebida2">#2 Bebida:</label>
-      <input
-        id="bebida2"
-        name="bebida2"
-        value={form.bebida2}
-        onChange={handleChange}
-      />
-
-<label htmlFor="bebida3">#3 Bebida:</label>
-      <input
-        id="bebida3"
-        name="bebida3"
-        value={form.bebida3}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="bebida4">#4 Bebida:</label>
-      <input
-        id="bebida4"
-        name="bebida4"
-        value={form.bebida4}
-        onChange={handleChange}
-      />
-
-<label htmlFor="bebida5">#5 Bebida:</label>
-      <input
-        id="bebida5"
-        name="bebida5"
-        value={form.bebida5}
-        onChange={handleChange}
-      />
+          </div>
 
 
+              <div className='inputSingle-div'>
 
-      <label htmlFor="filme1">#1 Filme:</label>
-      <input
-        id="filme1"
-        name="filme1"
-        value={form.filme1}
-        onChange={handleChange}
-      />
+                  <div className='input-div'>
 
-<label htmlFor="filme2">#2 Filme:</label>
-      <input
-        id="filme2"
-        name="filme2"
-        value={form.filme2}
-        onChange={handleChange}
-      />
+                      <label  htmlFor="movie">Movie name:</label>
+                      <input
+                      id="name_m"
+                      className="input is-info"
+                      placeholder="Name of your favorite Movie"
+                      name="name_m"
+                      value={form.name_m}
+                      onChange={handleChange}                       
+                      />
 
-<label htmlFor="filme3">#3 Filme:</label>
-      <input
-        id="filme3"
-        name="filme3"
-        value={form.filme3}
-        onChange={handleChange}
-      />
+                  </div>
 
-<label htmlFor="filme4">#4 Filme:</label>
-      <input
-        id="filme4"
-        name="filme4"
-        value={form.filme4}
-        onChange={handleChange}
-      />
+                      <div className='input-div'>
 
-<label htmlFor="filme5">#5 Filme:</label>
-      <input
-        id="filme5"
-        name="filme5"
-        value={form.filme5}
-        onChange={handleChange}
-      />
+                          <label  htmlFor="image_m">Image Link:</label>
+                          <input
+                          className="input is-info"
+                          placeholder="Movie image Link "
+                          name="image_m"
+                          value={form.image_m}
+                          onChange={handleChange}                      
+                          />
+                      </div>
 
-    <label htmlFor="serie1">#1 Serie:</label>
-      <input
-        id="serie1"
-        name="serie1"
-        value={form.serie1}
-        onChange={handleChange}
-      />
-<label htmlFor="serie2">#2 Serie:</label>
-      <input
-        id="serie2"
-        name="serie2"
-        value={form.serie2}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="serie3">#3 Serie:</label>
-      <input
-        id="serie3"
-        name="serie3"
-        value={form.serie3}
-        onChange={handleChange}
-      />
+                      <div className='input-div'>
 
-<label htmlFor="serie4">#4 Serie:</label>
-      <input
-        id="serie4"
-        name="serie4"
-        value={form.serie4}
-        onChange={handleChange}
-      />
+                      <label  htmlFor="description_m">Movie description:</label>
+                      <input
+                      className="input is-info"
+                      placeholder="Short description of the movie"
+                      name="description_m"
+                      value={form.description_m}
+                      onChange={handleChange}                        
+                      />
 
-<label htmlFor="serie5">#5 Serie:</label>
-      <input
-        id="serie5"
-        name="serie5"
-        value={form.serie5}
-        onChange={handleChange}
-      />
+                      </div>
+
+              </div>
 
 
-    <label htmlFor="banda1">#1 Banda:</label>
-      <input
-        id="banda1"
-        name="banda1"
-        value={form.banda1}
-        onChange={handleChange}
-      />
-      
-      <label htmlFor="banda2">#2 Banda:</label>
-      <input
-        id="banda2"
-        name="banda2"
-        value={form.banda2}
-        onChange={handleChange}
-      />
+              <div className='inputSingle-div'>
 
-<label htmlFor="banda3">#3 Banda:</label>
-      <input
-        id="banda3"
-        name="banda3"
-        value={form.banda3}
-        onChange={handleChange}
-      />
+              <div className='input-div'>
 
-<label htmlFor="banda4">#4 Banda:</label>
-      <input
-        id="banda4"
-        name="banda4"
-        value={form.banda4}
-        onChange={handleChange}
-      />
+                  <label  htmlFor="name_s">TvSerie name:</label>
+                  <input
+                  id="name_s"
+                  className="input is-info"
+                  placeholder="Name of your favorite TvSerie"
+                  name="name_s"
+                  value={form.name_s}
+                  onChange={handleChange}                       
+                  />
 
-<label htmlFor="banda5">#5 Banda:</label>
-      <input
-        id="banda5"
-        name="banda5"
-        value={form.banda5}
-        onChange={handleChange}
-      />
+              </div>
 
-      <label htmlFor="img_filme">Link foto filme:</label>
-      <input id="img_filme" name="img_filme" value={form.img_filme} onChange={handleChange} />
-      <label htmlFor="img_serie">Link foto filme:</label>
-      <input id="img_serie" name="img_serie" value={form.img_serie} onChange={handleChange} />
-      <button type="submit">Submit 5</button>
-    </form>
-    </div>
-    </div>
+                  <div className='input-div'>
 
-     )   
+                      <label  htmlFor="image_s">Image Link:</label>
+                      <input
+                      id="image_s"
+                      className="input is-info"
+                      placeholder="TvSerie image Link "
+                      name="image_s"
+                      value={form.image_s}
+                      onChange={handleChange}                      
+                      />
+                  </div>
 
-}
+                  <div className='input-div'>
+
+                      <label  htmlFor="description_s">TvSerie description:</label>
+                      <input
+                      id="description_s"
+                      className="input is-info"
+                      placeholder="Why is this your favorite TvShow?"
+                      name="description_s"
+                      value={form.description_s}
+                      onChange={handleChange}                        
+                      />
+
+                  </div>
+
+              </div> 
+
+              <div className='inputSingle-div'>
+
+                  <div className='input-div'>
+
+                      <label  htmlFor="name_d">Drink name:</label>
+                      <input
+                      id="name_d"
+                      className="input is-info"
+                      placeholder="Name of your favorite drink"
+                      name="name_d"
+                      value={form.name_d}
+                      onChange={handleChange}                       
+                      />
+                  </div>
+
+                      <div className='input-div'>
+
+                          <label  htmlFor="image_d">Image Link:</label>
+                          <input
+                          id="image_d"
+                          className="input is-info"
+                          placeholder="Drink image Link "
+                          name="image_d"
+                          value={form.image_d}
+                          onChange={handleChange}                      
+                          />
+                      </div>
+
+                      <div className='input-div'>
+
+                          <label  htmlFor="description_d">Drink description:</label>
+                          <input
+                          className="input is-info"
+                          placeholder="A description of your favorite drink"
+                          name="description_d"
+                          value={form.description_d}
+                          onChange={handleChange}                        
+                          />
+                          </div>
+
+              </div>  
+
+              <div className='inputSingle-div'>
+
+                  <div className='input-div'>
+
+                      <label  htmlFor="name_b">Band name:</label>
+                      <input
+                      id="name_b"
+                      className="input is-info"
+                      placeholder="Name of your favorite band"
+                      name="name_b"
+                      value={form.name_b}
+                      onChange={handleChange}                       
+                      />
+
+                  </div>
+
+                      <div className='input-div'>
+
+                          <label  htmlFor="image_b">Image Link:</label>
+                          <input
+                          id="image_b"
+                          className="input is-info"
+                          placeholder="Band image Link "
+                          name="image_b"
+                          value={form.image_b}
+                          onChange={handleChange}                      
+                          />
+                      </div>
+
+                      <div className='input-div'>
+
+                          <label  htmlFor="description_b">Band Songs:</label>
+                          <input
+                          id="description_b"
+                          className="input is-info"
+                          placeholder="The best songs by this band"
+                          name="description_b"
+                          value={form.description_b}
+                          onChange={handleChange}                        
+                          />
+
+                      </div>
+
+              </div>
+
+
+              <div className='inputSingle-div'>
+
+                  <div className='input-div'>
+
+                      <label  htmlFor="name_f">Food name:</label>
+                      <input
+                      id="name_f"
+                      className="input is-info"
+                      placeholder="Name of your favorite food"
+                      name="name_f"
+                      value={form.name_f}
+                      onChange={handleChange}                       
+                      />
+
+                  </div>
+
+                      <div className='input-div'>
+
+                          <label  htmlFor="image_f">Image Link:</label>
+                          <input
+                          id="image_f"
+                          className="input is-info"
+                          placeholder="Food image Link "
+                          name="image_f"
+                          value={form.image_f}
+                          onChange={handleChange}                      
+                          />
+                      </div>
+
+                      <div className='input-div'>
+
+                          <label  htmlFor="description_f">Food description:</label>
+                          <input
+                          id="description_f"
+                          className="input is-info"
+                          placeholder="A description of your favorite food"
+                          name="description_f"
+                          value={form.description_f}
+                          onChange={handleChange}                        
+                          />
+
+                      </div>
+
+              </div>
+
+              <div className='btnForms'>
+                <button className="button is-success" type="submit" >Submit Forms</button>
+              </div>
+
+              </form>
+          </div>
+          <FooterPage/>   
+      </>
+  )
+  }

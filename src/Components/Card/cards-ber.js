@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export function Card(props){
 
@@ -36,9 +37,11 @@ console.log(props)
                 </div>
 
                 <div className='btn-div'>
-
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn1'><i class="fa-regular fa-pen-to-square"></i></button>
+                    </Link>
                     <button className='btn-Card btn1' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
+                    
 
                 </div>
         </div>
@@ -60,8 +63,9 @@ console.log(props)
                 </div>
 
                 <div className='btn-div'>
-
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn2'><i class="fa-regular fa-pen-to-square"></i></button>
+                    </Link>
                     <button className='btn-Card btn2' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>    
@@ -84,7 +88,9 @@ console.log(props)
 
                 <div className='btn-div'>
 
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn3'><i class="fa-regular fa-pen-to-square"></i></button>
+                    </Link>
                     <button className='btn-Card btn3' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>   
@@ -105,8 +111,9 @@ console.log(props)
                 </div>    
 
                 <div className='btn-div'>
-
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn4'><i class="fa-regular fa-pen-to-square"></i></button>
+                    </Link>
                     <button className='btn-Card btn4' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>   
@@ -130,7 +137,9 @@ console.log(props)
 
                 <div className='btn-div'>
 
+                <Link to={`/edittop5/${props.id}`} >
                     <button type="button" className='btn-Card btn5'><i class="fa-regular fa-pen-to-square"></i></button>
+                    </Link>
                     <button type="button" className='btn-Card btn5' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>         
