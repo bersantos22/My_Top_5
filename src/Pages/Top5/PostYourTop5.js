@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import './index.css'
 
+//págia de cards
 export function Top5(){
     const {id}= useParams();
     const [top5, setTop5] = useState([]);
