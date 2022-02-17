@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css'
 import axios from 'axios';
 import 'bulma/css/bulma.css'; 
+import { Link } from 'react-router-dom';
 
 export function Card(props){
 
@@ -38,8 +39,10 @@ console.log(props)
                 </div>
 
                 <div className='btn-div'>
-
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn1'><i class="fa-regular fa-pen-to-square"></i></button>
+                </Link>
+
                     
 
                 </div>
@@ -63,10 +66,11 @@ console.log(props)
                 </div>
 
                 <div className='btn-div'>
-
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn2'><i class="fa-regular fa-pen-to-square"></i></button>
-        
 
+                    </Link>
+                  
                 </div>    
         </div>
         <div className='card-base card-three'>
@@ -88,8 +92,9 @@ console.log(props)
 
                 <div className='btn-div'>
 
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn3'><i class="fa-regular fa-pen-to-square"></i></button>
-                
+                    </Link>                  
 
                 </div>   
         </div>
@@ -110,9 +115,9 @@ console.log(props)
                 </div>    
 
                 <div className='btn-div'>
-
+                <Link to={`/edittop5/${props.id}`} >
                     <button className='btn-Card btn4'><i class="fa-regular fa-pen-to-square"></i></button>
-                   
+                    </Link>
 
                 </div>   
         </div>
@@ -136,8 +141,11 @@ console.log(props)
 
                 <div className='btn-div'>
 
+                <Link to={`/edittop5/${props.id}`} >
                     <button type="button" className='btn-Card btn5'><i class="fa-regular fa-pen-to-square"></i></button>
-                   
+
+                    </Link>
+                    <button type="button" className='btn-Card btn5' onClick={handleDelete}><i class="fa-regular fa-trash-can"></i></button>
 
                 </div>         
         </div>
