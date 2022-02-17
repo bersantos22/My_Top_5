@@ -24,7 +24,7 @@ function App() {
 
       <Routes>
      
-        <Route path="/top-5-lists" element={<Top5/>}/>
+        <Route path="/gitr" element={<Top5/>}/>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/not-found" element={<ErrorPage/>}/>
         <Route path="/alltop5" element={<AllTop5/>}/>
