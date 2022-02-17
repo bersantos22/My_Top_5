@@ -12,8 +12,7 @@
   font-family:"Source Sans Pro" !important;
   font-size: 22px;
   color:#1a4e4b;
-/*   display: flex !important;
-  justify-content: space-evenly !important; */
+
 
 
 }
@@ -23,11 +22,7 @@
 width: 800px;
 height: 270px;
 padding: 10px;
- /*  display: flex;
-  flex-direction: row;
-  align-items: center;
-  just
-  ify-content: center; */
+
 }
 .owner{
   height: 110px;
@@ -35,14 +30,6 @@ padding: 10px;
 .input{
   width:100%;
 }
-/* 
- .is-success {
-
-} */
-/*
-.formulario{
-    padding: 30px !important;
-} */
 
 .is-info{
     padding: 20px !important;
@@ -66,4 +53,16 @@ padding: 10px;
   display: flex;
   justify-content: end;
   padding-right: 20px;
+}
+
+@media (max-width:1350px) {
+  .inputSingle-div{
+
+    width: 350px;
+    height: 270px;
+    padding: 10px;
+  }
+  .owner{
+    height: 100px;
+  }
 }

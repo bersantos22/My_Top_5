@@ -2,12 +2,13 @@
 
 .section3{
  background-color:#ecebeb;
- padding-bottom:30px;
+ padding-bottom: 50px;
 }
 .twoCards-div{
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+
 
 
 }
@@ -35,8 +36,15 @@ justify-content: space-around;
 .TextDev a{
     font-weight:bold;
 }
+.ourNames{
+    font-size: 20px;
+    font-weight: bolder;
+    color:#ea6722;
+}
 
 .DevCard{
+
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,4 +54,14 @@ justify-content: space-around;
     border-radius: 200px;
     width: 350px;
     height: 350px;
+}
+
+@media (max-width:1350px) {
+
+    .twoCards-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+}
 }
