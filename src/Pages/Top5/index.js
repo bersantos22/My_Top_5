@@ -16,7 +16,7 @@ export function Top5(){
                 const result = await axios.get(
                     `https://ironrest.herokuapp.com/mytop5/${id}`
                 );
-                console.log("***",result.data)
+
                 setTop5({...result.data});
             }catch(err){
                 console.error(err);
@@ -24,13 +24,14 @@ export function Top5(){
         }
 
         fetchTop5();
-       /*  setNewrender(false); */
+
 
     },[]);
 
     return(
 
         <>
+
  
         <section className='sectionAll'>
             
@@ -49,11 +50,17 @@ export function Top5(){
             </div>
 
         </section>
+
         <section>
             
-        </section>
+      
 
-                <Card
+        
+               <Card
+                id={top5._id}
+                key={top5._id}
+
+                name={top5.name}
 
                 name_m={top5.name_m}
                 image_m={top5.image_m}
@@ -76,13 +83,11 @@ export function Top5(){
                 description_f={top5.description_f}
 
                 
-                
+        
                 />
+  </section>
                 </>
             )
-        
-
-        
-      
+    
     
 }
