@@ -4,6 +4,7 @@ import "./style.css"
 import 'bulma/css/bulma.css'; 
 import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage";
 import axios from "axios";
+import { Top5 } from '../Top5/PostYourTop5';
 
 export function PostYourTop5(){
     const [forms, setForms] = useState({
@@ -51,6 +52,42 @@ export function PostYourTop5(){
         axios.post("https://ironrest.herokuapp.com/mytop5", forms);
       }
 
+        const [top5, setTop5] = useState({
+            name:"",
+            food:"",
+            drink:"",
+            movie:"",
+            serie:"",	
+            band:"",
+            image_f :"",
+            image_d:"",
+            image_m:"l",
+            image_s:"",
+            image_b:"",
+            description:""
+        });
+
+        function handleChange(event) {
+            setForm({ ...top5, [event.target.name]: event.target.value });
+            console.log(top5);
+          }
+        
+          function handleSubmit(event) {
+            event.preventDefault();
+        
+            for (let key in form) {
+              if (!top5[key]) {
+                window.alert(`Adicione o campo ${key} !`);
+                return;
+              }
+            }
+        
+            console.log("Huuumm deu ruim se pá");
+            axios.post("https://ironrest.herokuapp.com/mytop5", top5);
+          }
+        
+
+
     return(
         <>
             <section className='sectionAll'>
@@ -76,9 +113,9 @@ export function PostYourTop5(){
 
                 <div className='input-div'>
 
-                    <label className='labelClass' htmlFor="name">Your name:</label>
+                    <label  htmlFor="name">Your name:</label>
                     <input
-                    className="input is-info"
+                    id="name"
                     placeholder="Owner's Name"
                     name="name"
                     value={forms.name}  
@@ -93,12 +130,13 @@ export function PostYourTop5(){
 
                     <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="movieName">Movie name:</label>
+                        <label  htmlFor="movie">Movie name:</label>
                         <input
+                        id="movie"
                         className="input is-info"
                         placeholder="Name of your favorite Movie"
                         name="movieName"
-                        value={forms.name_m}
+                        value={forms.movie}
                         onChange={handleChange}                       
                         />
 
@@ -106,7 +144,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="imgMovie">Image Link:</label>
+                            <label  htmlFor="imgMovie">Image Link:</label>
                             <input
                             className="input is-info"
                             placeholder="Movie image Link "
@@ -118,7 +156,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="descriptionMovie">Movie description:</label>
+                        <label  htmlFor="descriptionMovie">Movie description:</label>
                         <input
                         className="input is-info"
                         placeholder="Short description of the movie"
@@ -136,12 +174,12 @@ export function PostYourTop5(){
 
                 <div className='input-div'>
 
-                    <label className='labelClass' htmlFor="serieName">TvSerie name:</label>
+                    <label  htmlFor="serie">TvSerie name:</label>
                     <input
                     className="input is-info"
                     placeholder="Name of your favorite TvSerie"
-                    name="serieName"
-                    value={forms.name_s}
+                    name="serie"
+                    value={forms.serie}
                     onChange={handleChange}                       
                     />
 
@@ -149,7 +187,7 @@ export function PostYourTop5(){
 
                     <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="imgSerie">Image Link:</label>
+                        <label  htmlFor="imgSerie">Image Link:</label>
                         <input
                         className="input is-info"
                         placeholder="TvSerie image Link "
@@ -161,7 +199,7 @@ export function PostYourTop5(){
 
                     <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="descriptionTvSerie">TvSerie description:</label>
+                        <label  htmlFor="descriptionTvSerie">TvSerie description:</label>
                         <input
                         className="input is-info"
                         placeholder="Why is this your favorite TvShow?"
@@ -178,19 +216,20 @@ export function PostYourTop5(){
 
                     <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="drinkName">Drink name:</label>
+                        <label  htmlFor="drink">Drink name:</label>
                         <input
+                        id="drink"
                         className="input is-info"
                         placeholder="Name of your favorite drink"
-                        name="drinkName"
-                        value={forms.name_d}
+                        name="drink"
+                        value={forms.drink}
                         onChange={handleChange}                       
                         />
                     </div>
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="imgDrink">Image Link:</label>
+                            <label  htmlFor="imgDrink">Image Link:</label>
                             <input
                             className="input is-info"
                             placeholder="Drink image Link "
@@ -202,7 +241,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="descriptionDrink">Drink description:</label>
+                            <label  htmlFor="descriptionDrink">Drink description:</label>
                             <input
                             className="input is-info"
                             placeholder="A description of your favorite drink"
@@ -218,12 +257,13 @@ export function PostYourTop5(){
 
                     <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="bandName">Band name:</label>
+                        <label  htmlFor="band">Band name:</label>
                         <input
+                        id="band"
                         className="input is-info"
                         placeholder="Name of your favorite band"
-                        name="bandName"
-                        value={forms.name_b}
+                        name="band"
+                        value={forms.band}
                         onChange={handleChange}                       
                         />
 
@@ -231,7 +271,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="imgBand">Image Link:</label>
+                            <label  htmlFor="imgBand">Image Link:</label>
                             <input
                             className="input is-info"
                             placeholder="Band image Link "
@@ -243,7 +283,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="descriptionBand">Band Songs:</label>
+                            <label  htmlFor="descriptionBand">Band Songs:</label>
                             <input
                             className="input is-info"
                             placeholder="The best songs by this band"
@@ -261,11 +301,12 @@ export function PostYourTop5(){
 
                     <div className='input-div'>
 
-                        <label className='labelClass' htmlFor="foodName">Food name:</label>
+                        <label  htmlFor="food">Food name:</label>
                         <input
+                        id="food"
                         className="input is-info"
                         placeholder="Name of your favorite food"
-                        name="foodName"
+                        name="food"
                         value={forms.name_f}
                         onChange={handleChange}                       
                         />
@@ -274,7 +315,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="imgFood">Image Link:</label>
+                            <label  htmlFor="imgFood">Image Link:</label>
                             <input
                             className="input is-info"
                             placeholder="Food image Link "
@@ -286,7 +327,7 @@ export function PostYourTop5(){
 
                         <div className='input-div'>
 
-                            <label className='labelClass' htmlFor="descriptionFood">Food description:</label>
+                            <label  htmlFor="descriptionFood">Food description:</label>
                             <input
                             className="input is-info"
                             placeholder="A description of your favorite food"

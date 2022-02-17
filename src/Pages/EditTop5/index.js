@@ -7,38 +7,11 @@ export function EditTop5(){
     const params = useParams();
     const [form, setForm] = useState({
 
-        name_owner:"",
-        name_top:"",
-        comida1: "",
-        comida2: "",
-        comida3: "",
-        comida4: "",
-        comida5: "",
-        bebida1: "",
-        bebida2: "",
-        bebida3: "",
-        bebida4: "",
-        bebida5: "",
-        filme1: "",
-        filme2: "",
-        filme3: "",
-        filme4: "",
-        filme5: "",
-        serie1: "",
-        serie2: "",
-        serie3: "",
-        serie4: "",
-        serie5: "",
-        banda1: "",
-        banda2: "",
-        banda3: "",
-        banda4: "",
-        banda5: "",
-        img_filme: "",
-        img_serie: "",
+      
     });
+
     useEffect(()=>{
-        async function fetchTop5{
+        async function fetchTop5(){
         try{
             const response = await axios.get(
                 `https://ironrest.herokuapp.com/mytop5/${params.id}`
@@ -110,16 +83,16 @@ export function EditTop5(){
         onChange={handleChange}
       />
      
-      <label htmlFor="comida1">#1 Comida:</label>
+      <label htmlFor="comida1"> Comidas:</label>
       <input
         id="comida1"
-        placeholder="Batata frita"
-        name="comida1"
-        value={form.comida1}
+        placeholder=""
+        name="comida"
+        value={form.comidas.comida1}
         onChange={handleChange}
       />
 
-      <label htmlFor="comida2">#2 Comida:</label>
+      <label htmlFor="comida2"> Comida:</label>
       <input
         id="comida2"
         placeholder="Batata frita"
