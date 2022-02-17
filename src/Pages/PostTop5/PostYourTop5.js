@@ -4,7 +4,6 @@ import "./style.css"
 import 'bulma/css/bulma.css'; 
 import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage";
 import axios from "axios";
-import { Top5 } from '../Top5/PostYourTop5';
 
 export function PostYourTop5(){
     const [forms, setForms] = useState({
@@ -54,28 +53,31 @@ export function PostYourTop5(){
 
         const [top5, setTop5] = useState({
             name:"",
+
             food:"",
             drink:"",
             movie:"",
             serie:"",	
             band:"",
+
             image_f :"",
             image_d:"",
             image_m:"l",
             image_s:"",
             image_b:"",
+
             description:""
         });
 
         function handleChange(event) {
-            setForm({ ...top5, [event.target.name]: event.target.value });
+            setForms({ ...top5, [event.target.name]: event.target.value });
             console.log(top5);
           }
         
           function handleSubmit(event) {
             event.preventDefault();
         
-            for (let key in form) {
+            for (let key in forms) {
               if (!top5[key]) {
                 window.alert(`Adicione o campo ${key} !`);
                 return;
@@ -115,6 +117,7 @@ export function PostYourTop5(){
 
                     <label  htmlFor="name">Your name:</label>
                     <input
+                    className="input is-info"
                     id="name"
                     placeholder="Owner's Name"
                     name="name"
