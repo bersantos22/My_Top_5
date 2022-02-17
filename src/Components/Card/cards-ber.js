@@ -23,8 +23,9 @@ console.log(props)
     <div className='card-container'>
 
         <div className='card-base card-one'>
-                <div className='imgCards'>
-                    <img src={props.image_m} alt='ImgCard' />
+                <div className='imgCards'  
+                style={{backgroundImage:`url(${props.image_m})`}}>
+                   
                 </div>
 
                 <div className='btn-base btn-one'>
@@ -48,8 +49,9 @@ console.log(props)
 
         <div className='card-base card-two'>
 
-                <div className='imgCards'>
-                    <img src={props.image_s} alt='ImgCard' />
+                <div className='imgCards' 
+                style={{backgroundImage:`url(${props.image_s})`}}>
+                
                 </div>
 
                 <div className='btn-base btn-two'>
@@ -72,8 +74,9 @@ console.log(props)
         </div>
         <div className='card-base card-three'>
 
-                <div className='imgCards'>
-                    <img src={props.image_d} alt='ImgCard' />
+                <div className='imgCards' 
+                style={{backgroundImage:`url(${props.image_d})`}}>
+                    
                 </div>
 
                 <div className='btn-base btn-three'>
@@ -97,8 +100,9 @@ console.log(props)
         </div>
 
         <div className='card-base card-four'>
-                <div className='imgCards'>
-                    <img src={props.image_b} alt='ImgCard' />
+                <div className='imgCards'  
+                style={{backgroundImage:`url(${props.image_b})`}}>
+
                 </div>
 
                 <div className='btn-base btn-four'>
@@ -121,8 +125,9 @@ console.log(props)
 
         <div className='card-base card-five'>
 
-                <div className='imgCards'>
-                    <img src={props.image_f} alt='ImgCard' />
+                <div className='imgCards'  
+                style={{backgroundImage:`url(${props.image_f})`}}>
+                   
                 </div>
 
                 <div className='btn-base btn-five'>
