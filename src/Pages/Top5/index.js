@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import './index.css'
+import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage";
 
 //págia de cards
 export function Top5(){
@@ -33,29 +34,26 @@ export function Top5(){
         <>
 
  
-        <section className='sectionAll'>
+        <section className='sectionTop5'>
             
             <div className="textAll">
 
-            <div className="smallTextTop">
-                <p>My Top 5 </p>
-            </div>
+                <div className="smallTextTop">
+                    <p>My Top 5 </p>
+                </div>
 
-            <div className='bigText'>
-                <p>THIS IS THE BEST</p>
-            </div>
-            <div className='nameTop5'>
-                <p>Top 5 of  {top5.name}</p>
-            </div>
+                <div className='bigText'>
+                    <p>THIS IS THE BEST</p>
+                </div>
+                <div className='nameTop5'>
+                    <p>Top 5 of  {top5.name}</p>
+                </div>
+            
             </div>
 
         </section>
 
-        <section>
-            
-      
-
-        
+        <section className="sectionCard">
                <Card
                 id={top5._id}
                 key={top5._id}
@@ -85,7 +83,9 @@ export function Top5(){
                 
         
                 />
+                
   </section>
+  <FooterPage />
                 </>
             )
     

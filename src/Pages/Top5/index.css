@@ -17,9 +17,9 @@
 
 .sectionTop5{
     display: flex;
-    padding: 25px;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     font-family: 'Oswald';
     background-color: #262b2b;
     align-items: center;
@@ -37,6 +37,39 @@
     font-size: 40px;
     font-display: swap;
     font-weight:bold;
-    padding-left: 50px;
-    padding-top: 30px;
+    padding-top: 10px;
+}
+
+.sectionCard{
+  /*   padding-left: 120px;
+    padding-right: 120px; */
+    padding-bottom: 30px;
+    background-color:#ecebeb; ;
+}
+
+.btnDelete{
+    font-size: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.btnDel{
+    padding: 5px;
+    padding-right: 40px;
+}
+
+.is-danger{
+    border:1.5px solid black !important;
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 12px 32px rgba(0,0,0,0.2);
+}
+
+.is-danger:hover{
+    transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(27, 27, 27, .8);
+        cursor:pointer;
 }
