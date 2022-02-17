@@ -19,14 +19,14 @@ export function Section1(){
                 </div>
                 <br></br>
                 <div className="textBotton">
-                     <p>You can create your top 5: Bands, TvSeries, Movies, Foods and Drinks! Click in button bellow and start your <i>MyTop 5</i> !</p>
+                     <p>You can create your top 5: Band, TvSerie, Movie, Food and Drink! Click in button bellow and start your <i>MyTop 5</i> !</p>
                 </div>
 
                 <div className="divButton">
                    
                 <Link className="nav-link text-light" to="/top-5-lists">
                 <button className="btnSection1">
-                        <i>Top 5</i>
+                        <i>My Top 5</i>
                     </button>
                 </Link>
                     

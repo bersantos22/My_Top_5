@@ -52,25 +52,32 @@ export function PostTop() {
 
   function handleChange(event) {
     setListInfo({ ...listInfo, [event.target.name]: event.target.value });
+    
   }
+console.log(listInfo)
 
   function handleFoods(event) {
     setFoods({ ...foods, [event.target.name]: event.target.value });
   }
+  console.log(foods)
+
   function handleDrinks(event) {
     setDrinks({ ...drinks, [event.target.name]: event.target.value });
   }
+console.log(series)
 
   function handleSeries(event) {
     setSeries({ ...series, [event.target.name]: event.target.value });
   }
+  console.log(movies)
   function handleMovies(event) {
     setMovies({ ...movies, [event.target.name]: event.target.value });
   }
+  console.log(drinks)
   function handleBands(event) {
     setBands({ ...bands, [event.target.name]: event.target.value });
   }
-
+console.log(bands)
   function handleAddItem() {
     setInfosToSubmit({
       ...listInfo,
@@ -106,7 +113,7 @@ export function PostTop() {
       });
 
       setSeries({
-        SeriesName: "",
+        seriesName: "",
         ranking: 0,
         image: "",
         description: "",
@@ -135,8 +142,8 @@ export function PostTop() {
 
     console.log("Nao caiu no if");
     axios.post("https://ironrest.herokuapp.com/mytop5", infosToSubmit);
+    console.log("AQUI", infosToSubmit)
   }
-
   return (
       <>
       <section className='sectionAll'>
@@ -364,7 +371,7 @@ export function PostTop() {
                 <div className='input-div'>
                     <input
                     className="input is-info"
-                    placeholder="Tv Series description ou comentary"
+                    placeholder="Tv Series description or comentary"
                     name="description"
                     value={series.description}
                     onChange={handleSeries}
