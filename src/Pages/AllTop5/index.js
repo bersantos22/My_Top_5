@@ -29,14 +29,14 @@ useEffect(()=>{
     
         <div className="textAll">
 
-        <div className="smallTextTop">
-            <p>Hello, everyone !</p>
-        </div>
+            <div className="smallTextTop">
+                <p>Hello, everyone !</p>
+            </div>
 
-        <div className='bigText'>
-            <p>THIS IS THE LIST OF ALL TOP 5</p>
-        </div>
-
+            <div className='bigText'>
+                <p>THIS IS THE LIST OF ALL TOP 5</p>
+            </div>
+    
         </div>
 
     </section>
