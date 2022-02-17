@@ -1,10 +1,9 @@
-import React from 'react'
+/* import React from 'react'
 import { useState } from "react";
 import "./style.css"
 import 'bulma/css/bulma.css'; 
 import { FooterPage } from "../../Components/HomePage-Components/FooterPage/FooterPage";
 import axios from "axios";
-import { Top5 } from '../Top5/PostYourTop5';
 
 export function PostYourTop5(){
 
@@ -64,7 +63,7 @@ export function PostYourTop5(){
 
         <form onSubmit={handleSubmit}>
 
-{/* OWNDER'S NAME */}
+
             <div className='inputSingle-div owner'>
 
                 <div className='input-div'>
@@ -81,7 +80,7 @@ export function PostYourTop5(){
 
             </div>
 
-{/* MOVIES */}
+
                 <div className='inputSingle-div'>
 
                     <div className='input-div'>
@@ -125,7 +124,7 @@ export function PostYourTop5(){
 
                 </div>
 
-{/* TvSeries */}
+
                 <div className='inputSingle-div'>
 
                 <div className='input-div'>
@@ -208,7 +207,7 @@ export function PostYourTop5(){
                             </div>
 
                 </div>  
-{/* BANDS */}
+
                 <div className='inputSingle-div'>
 
                     <div className='input-div'>
@@ -252,7 +251,7 @@ export function PostYourTop5(){
 
                 </div>
 
-{/* Foods */}
+
                 <div className='inputSingle-div'>
 
                     <div className='input-div'>
@@ -305,4 +304,4 @@ export function PostYourTop5(){
             <FooterPage/>   
         </>
     )
-}
+} */
